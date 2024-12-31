@@ -1,0 +1,422 @@
+html {
+    font-family: 'Open Sans', sans-serif;
+}
+.bg-landing-image {
+    background-image: url('../../storage/images/backgrounds/landing-image.jpeg');
+    background-attachment: scroll;
+    background-position: center 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.bg-landing-image-2 {
+    background-image: url('../../storage/images/backgrounds/landing-image-2.jpeg');
+    background-attachment: scroll;
+    background-position: center 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.bg-landing-image-3 {
+    background-color: #fff;
+    background-image: url('../../storage/images/backgrounds/landing-image-3.jpeg');
+    background-attachment: scroll;
+    background-position: center 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.bg-landing-image-4 {
+    background-color: #fff;
+    background-image: url('../../storage/images/backgrounds/landing-image-4.jpg');
+    background-attachment: scroll;
+    background-position: center 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.bg-landing-image-5 {
+    background-color: #fff;
+    background-image: url('../../storage/images/backgrounds/landing-image-5.png');
+    background-attachment: scroll;
+    background-position: center 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.bg-landing-image-6 {
+    background-color: #fff;
+    background-image: url('../../storage/images/backgrounds/landing-image-6.jpg');
+    background-attachment: scroll;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.bg-landing-image-7 {
+    background-color: #fff;
+    background-image: url('../../storage/images/backgrounds/landing-image-7.jpg');
+    background-attachment: scroll;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.bg-landing-image-8 {
+    background-color: #fff;
+    background-image: url('../../storage/images/backgrounds/landing-image-8.jpg');
+    background-attachment: scroll;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.bg-landing-image-9 {
+    background-color: #fff;
+    background-image: url('../../storage/images/backgrounds/landing-image-9.jpg');
+    background-attachment: scroll;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.fa-2024-bg-landing-image {
+    background-color: #fff;
+    background-image: url('../../storage/images/backgrounds/landing-image-2024.png');
+    background-attachment: scroll;
+    background-position: top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.fa-2024-bg-landing-image-2 {
+    height: 500px;
+    background-color: #fff;
+    background-image: url('../../storage/images/backgrounds/landing-image-2-2024.png');
+    background-attachment: scroll;
+    background-position: top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.fa-2024-bg-landing-partners {
+    background-color: #fff;
+    background-image: url('../../storage/images/backgrounds/partners-2024.jpeg');
+    background-attachment: scroll;
+    background-position: top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.fa-2024-bg-landing-quote {
+    background-color: #fff;
+    background-image: url('../../storage/images/backgrounds/quote-bg.png');
+    background-attachment: scroll;
+    background-position: top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.fa-2024-bg-footer {
+    background-color: #fff;
+    background-image: url('../../storage/images/backgrounds/footer.png');
+    background-attachment: scroll;
+    background-position: top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+/* ABOUT PAGE 2024 */
+.fa-2024-bg-aboutus {
+    /* background-color: #fff; */
+    background-image: url('../../storage/images/backgrounds/about-image-2-2024.png');
+    background-attachment: scroll;
+    background-position: top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.fa-2024-bg-wawlf {
+    background-color: #fff;
+    background-image: url('../../storage/images/backgrounds/Who-are-we-looking-for.png');
+    background-attachment: scroll;
+    background-position: top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+/* SERVICES PAGE 2024 */
+.fa-2024-bg-s1 {
+    background: url('../../storage/images/backgrounds/services/financial-planning-adults.png'), #ffffff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.fa-2024-bg-s2 {
+    background: url('../../storage/images/backgrounds/services/financial-planning-children.png'), #ffffff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.fa-2024-bg-s3 {
+    background: url('../../storage/images/backgrounds/services/insurance-portfolio-review.png'), #ffffff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.fa-2024-bg-s4 {
+    background: url('../../storage/images/backgrounds/services/savings-and-investments-plan.png'), #ffffff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.fa-2024-bg-s5 {
+    background: url('../../storage/images/backgrounds/services/retirement-planning.png'), #ffffff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.fa-2024-bg-s6 {
+    background: url('../../storage/images/backgrounds/services/loan-advisory.png'), #ffffff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.fa-2024-bg-s7 {
+    background: url('../../storage/images/backgrounds/services/investment-advisory.png'), #ffffff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.fa-2024-bg-s8 {
+    background: url('../../storage/images/backgrounds/services/general-insurance.png'), #ffffff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.fa-2024-bg-s9 {
+    background: url('../../storage/images/backgrounds/services/estate-planning.png'), #ffffff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.fa-2024-bg-s10 {
+    background: url('../../storage/images/backgrounds/services/business-continuity.png'), #ffffff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.fa-2024-bg-aul {
+    background: url('../../storage/images/backgrounds/aboutus-modal.png'), #1B3768;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.fa-2024-bg-events {
+    background: url('../../storage/images/backgrounds/events-bg.png'), #1B3768;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.fa-2024-bg-events-quote {
+    background-color: #fff;
+    background-image: url('../../storage/images/backgrounds/quote-bg-light.png');
+    background-attachment: scroll;
+    background-position: top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.fa-2024-services-card {
+    position: relative;
+    height: 20rem;
+    border-radius: 1.5rem;
+    margin: 10px;
+    /* box-shadow: 0px -80px 50px #333 inset; */
+    transition: 0.25s ease-in;
+}
+.fa-2024-bg-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    border-radius: 1.5rem;
+    /* z-index: 9999; */
+    background: linear-gradient(180deg, rgba(22, 22, 22, 0.00) -5.12%, #282828 162.5%);
+}
+.fa-2024-bg-overlay:hover {
+    background: linear-gradient(180deg, rgb(0 0 0 / 30%) -5.12%, #000000 162.5%);
+}
+.fa-2024-bg-overlay-active {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    border-radius: 1.5rem;
+    /* z-index: 9999; */
+    background: linear-gradient(180deg, rgba(22, 22, 22, 0.00) -5.12%, #282828 162.5%);
+}
+.content {
+    position: absolute;
+    bottom: 25px;
+    left: 30px;
+}
+/* .content-details {
+    width: 100%;
+    height: 22rem;
+    position: absolute;
+    bottom: -22rem;
+    background-color: #fff;
+    box-shadow: 0px 4.242px 4.242px 0px rgba(0, 0, 0, 1);
+    z-index: 99;
+    margin: 0px 10px;
+}
+.content-details:nth-child(odd) {
+    z-index: 99;
+} */
+.content h4 {
+    color: var(--White, #F6F6FA);
+    font-family: Lato;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+.content h6 {
+    color: var(--White, #F6F6FA);
+    font-family: Lato;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.ils-services-card:hover .fa-2024-bg-overlay {
+    background: linear-gradient(180deg, rgb(0 0 0 / 30%) -5.12%, #000000 162.5%);
+}
+.ils-services-card:hover .fa-2024-bg-overlay {
+    background: linear-gradient(180deg, rgb(0 0 0 / 30%) -5.12%, #000000 162.5%);
+}
+.ils-services-card:hover .content {
+    bottom: 35px;
+}
+/* For signin page */
+.bg-landing-image-10 {
+    background-color: rgb(250, 251, 252);
+    background-image: url('../../storage/images/backgrounds/landing-image-7.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.box-shadow-landing {
+    box-shadow: 0 15px 35px rgb(50 50 93 / 10%), 0 5px 15px rgb(0 0 0 / 7%);
+}
+.finark-default-link {
+    text-decoration: none !important;
+}
+.finark-default-link:hover {
+    text-decoration: underline !important;
+}
+.map-responsive {
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe {
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+.finark-social-icons {
+    width: 60px;
+    height: 60px;
+    margin: 0 20px;
+}
+.finark-social-icons:hover {
+    cursor: pointer;
+    width: 55px;
+    height: 55px;
+    opacity: 0.8;
+}
+.trustmark {
+    height: 84px;
+}
+.finark-btn-tool {
+    background-color: transparent;
+    color: #adb5bd;
+    font-size: .875rem;
+    margin: -0.75rem 0;
+    padding: 0.25rem 0.5rem;
+}
+.finark-btn-tool:hover {
+    color: #212529;
+}
+.finark-post-header {
+    float: left;
+}
+.finark-post-header img {
+    float: left;
+    height: 40px;
+    width: 40px;
+}
+.finark-post-header .username, .description, .comment {
+    display: block;
+    margin-left: 50px;
+}
+.finark-post-header .username {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: -1px;
+}
+.finark-post-header .description {
+    color: gray;
+    font-size: 13px;
+    margin-top: -3px;
+}
+.finark-forum-badge {
+    font-size: 10px !important;
+}
+.finark-forum-stats {
+    font-size: 13px !important;
+}
+.finark-user-card {
+    list-style: none;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    transition: ease-in-out all 300ms;
+}
+.finark-user-card:nth-last-child(1) {
+    border-bottom: 1px solid transparent;
+}
+.finark-aside-avatar {
+    float: left;
+    height: 40px;
+    width: 40px;
+}
+.finark-user-card-details {
+    margin-left: 50px;
+    line-height: 1.5;
+}
+.finark-btn-border {
+    border-radius: 20px !important;
+}

@@ -1,0 +1,214 @@
+@import "_variables.scss";
+
+.admin {
+    &--sidebar {
+        width: $sidebar-width;
+        height: calc(100% - 60px);
+        background-color: rgb(10 10 10 / 34%);
+        backdrop-filter: blur(23px);
+        position: fixed;
+        right: 0;
+        left: calc($sidebar-width) * -1;
+        top: 30px;
+        bottom: 0;
+        border-radius: 15px;    
+        border: 1px solid #ffffff12;
+        transition: .6s;
+
+        &.show {
+            left: 30px;
+
+            > .admin--sidebar--content > .admin--sidebar--content--header > .icon-wrapper {
+                top: 28px;
+                right: 29px;
+                background-color: rgb(40 40 40 / 34%);
+                transition: .1s;
+            }
+        }
+
+        > &--wrapper {
+            position: relative;
+            height: 100%;
+        }
+
+        > &--footer {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            padding: 1rem;
+            font-size: .6rem;
+            color: #fff;
+            background-color: rgb(40 40 40 / 34%);
+            backdrop-filter: blur(23px);
+            border-radius: 0 0 1rem 1rem;
+        }
+
+        > &--content {
+            padding: 20px 24px 16px;
+
+            > &--header {
+                padding-bottom: .5rem;
+                border-bottom: 1px solid #6868686b;
+
+                img {
+                    width: 30%;
+                }
+                > .icon-wrapper {
+                    width: 36px;
+                    height: 36px;
+                    padding: 12px;
+                    background-color: rgb(40,40,40);
+                    position: absolute;
+                    top: -14px;
+                    right: -56px;
+                    float: right;
+                    border-radius: 100%;
+                    border: 1px solid #ffffff12;
+                    line-height: 2.7;
+                    cursor: pointer;
+                    transition: 1s;
+
+                    &:hover {
+                        background-color: rgb(40 40 40 / 20);
+                    }
+
+                    > .icon {
+                        width: 100%;
+                        margin-top: -19px;
+                        color: #fff;
+                    }
+                }
+            }
+
+            > &--user {
+                padding: .5rem 0;
+                border-bottom: 1px solid #6868686b;
+
+                &--avatar {
+                    height: 60px;
+                    border: 3px solid transparent;
+                    outline: 2px solid rgba(255, 255, 255, 0.0705882353);
+                }
+
+                &--role {
+                    display: inline-block;
+                    padding: 1px 5px;
+                    font-size: .6rem;
+                    color: #fff;
+                    border-radius: .3rem;
+                    background-color: $main-color;
+                }
+
+                &--name {
+                    margin-bottom: -.2rem;
+                    font-size: .7rem;
+                    color: #fff;
+                    white-space: normal !important;
+                }
+            }
+        }
+        
+        > &--navigation {
+            padding: 0 8px;
+            max-height: calc(184.66px);
+
+            > .nav--link {
+                display: block;
+                padding: .3rem 16px;
+                font-size: .7rem;
+                font-weight: 500;
+                color: #fff !important;
+                cursor: pointer;
+                text-decoration: none;
+                border-radius: .3rem;
+
+                &:hover {
+                    background-color: rgba($color: #fff, $alpha: .2);
+                }
+
+                > .nav--icon {
+                    margin-right: .5rem;
+                }
+            }
+        }
+    }
+
+    &--main-content {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: .4s;
+
+        &.show {
+            width: calc(100% - $sidebar-width - 60px);
+            left: calc($sidebar-width + 60px);
+
+            > .admin--header {
+                width: 100%;
+            }
+        }
+    }
+
+    &--header {
+        height: 60px;
+        padding: 20px;
+
+        &--breadcrumb {
+            // margin-left: 50px;
+            color: #fff !important;
+
+            h6 {
+                font-weight: 700;
+                padding: 0;
+                margin: 0;
+            }
+
+            p {
+                font-size: .8rem;
+                line-height: 1rem;
+                font-weight: 500;
+            
+                > .icon {
+                    margin: 0 3px;
+                    font-size: .5rem;
+                }
+            }
+        }
+    }
+
+    &--main {
+        height: calc(100vh - 60px);
+        padding: 20px 20px 0px;
+
+        > div {
+            border-radius: 1rem 1rem 0rem 0rem;
+        }
+    }
+}
+.sidebar-icon-wrapper {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+    background-color: rgb(40,40,40);
+    // position: absolute;
+    // top: 20px;
+    // left: 20px;
+    border-radius: 100%;
+    border: 1px solid #ffffff12;
+    line-height: 1.2;
+    cursor: pointer;
+    transition: 1s;
+
+    &:hover {
+        background-color: rgb(40 40 40 / 20);
+    }
+
+    > .icon {
+        width: 100%;
+        color: #fff;
+    }
+}
