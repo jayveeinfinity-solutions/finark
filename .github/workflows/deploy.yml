@@ -31,14 +31,22 @@ jobs:
     - name: Build NPM Assets
       run: npm run build
 
-    - name: Synchronize Files To Server
-      uses: easingthemes/ssh-deploy@v2.1.5
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        SOURCE: "."
-        REMOTE_HOST: ${{ secrets.VPS_HOST }}
-        REMOTE_USER: ${{ secrets.VPS_USER }}
-        TARGET: "_finark_laravel"
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        server-dir: /_finark_laravel/
+
+    # - name: Synchronize Files To Server
+    #   uses: easingthemes/ssh-deploy@v2.1.5
+    #   env:
+    #     SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+    #     SOURCE: "."
+    #     REMOTE_HOST: ${{ secrets.VPS_HOST }}
+    #     REMOTE_USER: ${{ secrets.VPS_USER }}
+    #     TARGET: "_finark_laravel"
 
     # - name: Run Remote/Artisan Commands
     #   uses: appleboy/ssh-action@v0.1.6
