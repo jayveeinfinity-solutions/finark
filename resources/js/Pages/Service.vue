@@ -36,11 +36,13 @@
     <!-- # QUOTE SECTION -->
     <div class="container-fluid fa-2024-bg-landing-quote">
         <div class="container-xxl py-7">
-            <div class="d-flex flex-row justify-content-between">
-                <p class="fa-2024-services-quote">We would <span>love</span> to hear from you</p>
-                <div class="d-flex flex-column">
+            <div class="row d-flex justify-content-between">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <p class="fa-2024-services-quote">We would <span>love</span> to hear from you</p>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 d-flex flex-column">
                     <p class="fa-2024-services-quote-alt">Share with friends</p>
-                    <div class="d-flex flex-row align-items-center" style="gap: 1.5rem !important">
+                    <div class="d-flex flex-row justify-content-center align-items-center" style="gap: 1.5rem !important">
                         <a class="finark-default-link" href="https://www.facebook.com/FinancialArk" target="_blank">
                             <FontAwesomeIcon icon="fa-brands fa-square-facebook" class="fa-2024-services-social-icon" />
                         </a>

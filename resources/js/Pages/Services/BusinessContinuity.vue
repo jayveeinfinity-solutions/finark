@@ -4,7 +4,7 @@
         <div class="fa-2024-bg-overlay-active"></div>
         <div class="fa-2024-services-card-active-content">
             <h4>Business Continuity</h4>
-            <h6 class="text-truncate">Protect your business and minimize the effects<br>of potential disruption</h6>
+            <h6>Protect your business and minimize the effects<br>of potential disruption</h6>
         </div>
     </div>
     <div class="mt-5 p-4 d-flex flex-column justify-content-center" style="gap: 2.5rem;">

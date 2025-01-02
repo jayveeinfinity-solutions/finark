@@ -22,7 +22,7 @@
                     <h2 class="text-start text-uppercase" style="color: #F6F6FA;font-family: Lato;font-size: 3.5rem;font-style: normal;font-weight: 900;line-height: normal;">
                         About Us
                     </h2>
-                    <p style="color: #F6F6FA; font-family: Lato; font-size: 2rem; font-style: normal; font-weight: 400; line-height: normal;">
+                    <p class="text-start" style="color: #F6F6FA; font-family: Lato; font-size: 2rem; font-style: normal; font-weight: 400; line-height: normal;">
                         Let us introduce to you who we are and what we stand for.
                     </p>
                 </div>
@@ -82,9 +82,9 @@
     <!-- WHO ARE WE ARE LOKKING FOR SECTION -->
     <div class="container-fluid fa-2024-bg-wawlf">
         <div class="container">
-            <div class="d-flex justify-content-between py-6">
-                <div class="col-6 align-self-center fa-2024-aboutus-wawlf">Who are we are we looking for?</div>
-                <div class="col-6">
+            <div class="row d-flex justify-content-between py-6">
+                <div class="col-lg-6 col-12 align-self-center fa-2024-aboutus-wawlf">Who are we are we looking for?</div>
+                <div class="col-lg-6 col-12">
                     <p class="fa-2024-aboutus-wawlf-text">Experienced financial consultants <span>who wants a safe environment to build their financial advisory practice, with access to wider product offerings and superior remuneration model.</span></p>
                     <hr style="margin-top: 2rem;
                     margin-bottom: 2rem;
