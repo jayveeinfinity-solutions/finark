@@ -8,6 +8,9 @@
                         <h5>Log in to continue</h5>
                     </div>
                 </div>
+                <div class="alert alert-warning text-center" role="alert">
+                    FinArk intranet is on <span class="text-danger fw-bold">maintenance</span>.<br>Thank you!
+                </div>
                 <div>
                     <form @submit.prevent="submit">
                         <div class="form-group mb-2">

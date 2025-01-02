@@ -28,7 +28,7 @@ line-height: normal;">
             </p>
         </div>
     </div>
-    <div class="container-xxl container-xl container-lg container-md container-sm pt-5 pb-5">
+    <!-- <div class="container-xxl container-xl container-lg container-md container-sm pt-5 pb-5">
         <div style="background: url('storage/images/backgrounds/unsplash_VBLHICVh-lI.png'), lightgray 3.064px -359.344px / 100% 176.889% no-repeat;">
             <div style="background: linear-gradient(270deg, #D9D9D9 0.21%, #172A55 0.22%, rgba(25, 52, 98, 0.00) 61.72%);">
                 <div class="d-flex flex-row-reverse">
@@ -60,10 +60,22 @@ line-height: normal;">
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="container-xxl container-xl container-lg container-md container-sm pt-5 pb-7">
         <div class="row">
-            <div class="col-lg-4 col-12 mb-5">
+            <div class="col-lg-3 col-md-12 col-sm-12 mb-7">
+                <div class="d-flex flex-column justify-content-center align-items-center h-100 py-9 fa-2024-bg-events">
+                    <h4 class="fa-2024-events-card-new px-5">
+                        More blogs coming soon
+                    </h4>
+                    <span>
+                        <svg class="fa-2024-events-card-new-icon text-white" xmlns="http://www.w3.org/2000/svg" width="57" height="57" viewBox="0 0 57 57" fill="none">
+                            <path d="M49.875 28.5C49.875 28.9724 49.6873 29.4255 49.3533 29.7595C49.0192 30.0936 48.5662 30.2812 48.0938 30.2812H30.2812V48.0938C30.2812 48.5662 30.0936 49.0192 29.7595 49.3533C29.4255 49.6873 28.9724 49.875 28.5 49.875C28.0276 49.875 27.5745 49.6873 27.2405 49.3533C26.9064 49.0192 26.7188 48.5662 26.7188 48.0938V30.2812H8.90625C8.43383 30.2812 7.98077 30.0936 7.64672 29.7595C7.31267 29.4255 7.125 28.9724 7.125 28.5C7.125 28.0276 7.31267 27.5745 7.64672 27.2405C7.98077 26.9064 8.43383 26.7188 8.90625 26.7188H26.7188V8.90625C26.7188 8.43383 26.9064 7.98077 27.2405 7.64672C27.5745 7.31267 28.0276 7.125 28.5 7.125C28.9724 7.125 29.4255 7.31267 29.7595 7.64672C30.0936 7.98077 30.2812 8.43383 30.2812 8.90625V26.7188H48.0938C48.5662 26.7188 49.0192 26.9064 49.3533 27.2405C49.6873 27.5745 49.875 28.0276 49.875 28.5Z" fill="#F6F6FA"/>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+            <!-- <div class="col-lg-4 col-12 mb-5">
                 <div class="d-flex flex-column justify-content-center bg-white h-100">
                     <div>
                         <img class="w-100" src="storage/images/backgrounds/events-1.jpg">
@@ -176,7 +188,7 @@ line-height: normal;">
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
     <!-- <div class="band py-7">
