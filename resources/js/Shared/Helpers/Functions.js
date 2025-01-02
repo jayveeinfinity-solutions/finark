@@ -10,6 +10,14 @@ const hasRole = (...roles) => {
 }
 
 const deSlug = (slug) => {
+    if (!slug || typeof slug !== 'string') {
+        return;
+    }
+    
+    if(!slug.includes('-')) {
+        return slug.charAt(0).toUpperCase() + slug.slice(1);
+    }
+
     var words = slug.split('-');
     for (var i = 0; i < words.length; i++) {
         var word = words[i];
