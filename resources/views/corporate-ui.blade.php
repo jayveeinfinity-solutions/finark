@@ -17,16 +17,14 @@
         <link href="{{ asset('css/nucleo-svg.css') }}" rel="stylesheet" />
         <!-- CSS Files -->
         <link rel="icon" type="image/png" href="{{ asset('storage/images/brands/logo.png') }}">
-        <!-- Argon CSS -->
-        <link type="text/css" href="{{ asset('css/argon.css?v=1.0.0') }}" rel="stylesheet">
-        <!-- Finark CSS -->
-        <link type="text/css" href="{{ asset('css/finark.css') }}" rel="stylesheet">
-
+        <link type="text/css" id="pagestyle" href="{{ asset('css/corporate-ui-dashboard.css?v=1.0.0') }}" rel="stylesheet">
+        <link href="{{ asset('css/custom.css') }}" rel="stylesheet" />
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <!-- Scripts -->
         @routes
-        @vite(['resources/js/app.js', "resources/js/Pages/{$page['component']}.vue"])
-        @inertiaHead
-
+        <!-- @vite(['resources/js/app.js', "resources/js/Pages/{$page['component']}.vue"]) -->
+        @vite(['resources/js/app.js'])
+        @vite(['resources/sass/forum.scss'])
         @inertiaHead
     </head>
     @inertia

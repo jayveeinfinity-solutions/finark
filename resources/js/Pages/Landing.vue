@@ -204,12 +204,12 @@
 </template>
 
 <script>
-    import Landing from './../Shared/Layouts/Landing.vue';
+    // import Landing from './../Shared/Layouts/Landing.vue';
 
     export default {
         props: {
             groups: Array
         },
-        layout: Landing
+        // layout: Landing
     }
 </script>

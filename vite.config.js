@@ -6,6 +6,7 @@ export default defineConfig({
     resolve: {
         alias: {
             '@shared': '/resources/js/Shared',
+            '@pages': '/resources/js/Pages',
         },
     },
     plugins: [

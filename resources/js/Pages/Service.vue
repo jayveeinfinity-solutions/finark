@@ -1,34 +1,34 @@
 <template>
     <div class="container-xxl pt-7 pb-5">
         <div class="mt-lg-5 mt-4">
-            <div v-if="page == 'financial-planning-adults'">
+            <div v-if="service == 'financial-planning-adults'">
                 <FinancialPlanningAdults />
             </div>
-            <div v-else-if="page == 'financial-planning-children'">
+            <div v-else-if="service == 'financial-planning-children'">
                 <FinancialPlanningChildren />
             </div>
-            <div v-else-if="page == 'insurance-portfolio-review'">
+            <div v-else-if="service == 'insurance-portfolio-review'">
                 <InsurancePortfolioReview />
             </div>
-            <div v-else-if="page == 'savings-and-investment-plans'">
+            <div v-else-if="service == 'savings-and-investment-plans'">
                 <SavingsAndInvestmentPlans />
             </div>
-            <div v-else-if="page == 'retirement-planning'">
+            <div v-else-if="service == 'retirement-planning'">
                 <RetirementPlanning />
             </div>
-            <div v-else-if="page == 'loan-advisory'">
+            <div v-else-if="service == 'loan-advisory'">
                 <LoanAdvisory />
             </div>
-            <div v-else-if="page == 'investment-advisory'">
+            <div v-else-if="service == 'investment-advisory'">
                 <InvestmentAdvisory />
             </div>
-            <div v-else-if="page == 'general-insurance'">
+            <div v-else-if="service == 'general-insurance'">
                 <GeneralInsurance />
             </div>
-            <div v-else-if="page == 'estate-planning'">
+            <div v-else-if="service == 'estate-planning'">
                 <EstatePlanning />
             </div>
-            <div v-else-if="page == 'business-continuity'">
+            <div v-else-if="service == 'business-continuity'">
                 <BusinessContinuity />
             </div>
         </div>
@@ -61,30 +61,37 @@
             </div>
         </div>
     </div>
-    <AppointmentModal :minDate="this.$page.props.minDate" :page="this.$page.props.page" />
+    <AppointmentModal :minDate="minDate" :page="service" />
 </template>
 
 <script setup>
-    import FinancialPlanningAdults from './../Pages/Services/FinancialPlanningAdults.vue';
-    import FinancialPlanningChildren from './../Pages/Services/FinancialPlanningChildren.vue';
-    import InsurancePortfolioReview from './../Pages/Services/InsurancePortfolioReview.vue';
-    import SavingsAndInvestmentPlans from './../Pages/Services/SavingsAndInvestmentPlans.vue';
-    import RetirementPlanning from './../Pages/Services/RetirementPlanning.vue';
-    import LoanAdvisory from './../Pages/Services/LoanAdvisory.vue';
-    import InvestmentAdvisory from './../Pages/Services/InvestmentAdvisory.vue';
-    import GeneralInsurance from './../Pages/Services/GeneralInsurance.vue';
-    import EstatePlanning from './../Pages/Services/EstatePlanning.vue';
-    import BusinessContinuity from './../Pages/Services/BusinessContinuity.vue';
+    import FinancialPlanningAdults from '@pages/Services/FinancialPlanningAdults.vue';
+    import FinancialPlanningChildren from '@pages/Services/FinancialPlanningChildren.vue';
+    import InsurancePortfolioReview from '@pages/Services/InsurancePortfolioReview.vue';
+    import SavingsAndInvestmentPlans from '@pages/Services/SavingsAndInvestmentPlans.vue';
+    import RetirementPlanning from '@pages/Services/RetirementPlanning.vue';
+    import LoanAdvisory from '@pages/Services/LoanAdvisory.vue';
+    import InvestmentAdvisory from '@pages/Services/InvestmentAdvisory.vue';
+    import GeneralInsurance from '@pages/Services/GeneralInsurance.vue';
+    import EstatePlanning from '@pages/Services/EstatePlanning.vue';
+    import BusinessContinuity from '@pages/Services/BusinessContinuity.vue';
       
-      import AppointmentModal from './../Shared/Components/AppointmentModal.vue';
+    import AppointmentModal from '@shared/Components/AppointmentModal.vue';
 </script>
 <script>
-    // import ServicesLayout from './../Shared/Layouts/Services';
+    // import ServicesLayout from '@shared/Layouts/Services.vue';
 
     export default {
         // layout: ServicesLayout,
         props: {
-            page: String
+            service: {
+                type: String,
+                required: true
+            },
+            minDate: {
+                type: String,
+                required: true
+            }
         }
     }
 </script>

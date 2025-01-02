@@ -39,7 +39,7 @@
           </a>
       </div>
       <div class="col-lg-6 col-md-6 col-sm-12 mb-1">
-          <a href="services/financial-planning-children" target="_blank">
+          <a href="services/financial-planning-children">
               <div class="fa-2024-services-card fa-2024-bg-s2">
                   <div class="fa-2024-bg-overlay"></div>
                   <div class="content">
