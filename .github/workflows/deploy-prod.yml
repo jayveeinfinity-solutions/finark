@@ -25,11 +25,11 @@ jobs:
       with:
         node-version: '20'
 
-    - name: Install NPM Dependencies
-      run: npm install --omit=dev
+    # - name: Install NPM Dependencies
+    #   run: npm install --omit=dev
 
-    - name: Build NPM Assets
-      run: npm run build
+    # - name: Build NPM Assets
+    #   run: npm run build
 
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
