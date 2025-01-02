@@ -7,7 +7,7 @@
                   <h2 class="text-start text-uppercase" style="color: #F6F6FA;font-family: Lato;font-size: 3.5rem;font-style: normal;font-weight: 900;line-height: normal;">
                     SERVICES
                   </h2>
-                  <p style="color: #F6F6FA; font-family: Lato; font-size: 2rem; font-style: normal; font-weight: 400; line-height: normal;">
+                  <p class="text-start" style="color: #F6F6FA; font-family: Lato; font-size: 2rem; font-style: normal; font-weight: 400; line-height: normal;">
                     Check out our list of expertise all compiled just for you.
                   </p>
               </div>

@@ -4,7 +4,7 @@
         <div class="fa-2024-bg-overlay-active"></div>
         <div class="fa-2024-services-card-active-content">
             <h4>Financial Planning (Children)</h4>
-            <h6 class="text-truncate">Create a safe tomorrow for your children.</h6>
+            <h6>Create a safe tomorrow for your children.</h6>
         </div>
     </div>
     <div class="mt-5 p-4 d-flex flex-column justify-content-center" style="gap: 2.5rem;">
