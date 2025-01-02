@@ -101,7 +101,7 @@ Route::get('/services/{slug}', function(string $slug) {
     }
 
     return Inertia::render('Service', [
-        'page' => $slug,
+        'service' => $slug,
         'minDate' => $dateToday->format('Y-m-d')
     ]);
 });
@@ -252,7 +252,9 @@ Route::middleware('auth')->group(function() {
 |
 */
         Route::prefix('forum')->group(function () {
-            Route::get('/', [ForumController::class, 'index']);
+            Route::get('/', [ForumController::class, 'index'])->name('admin.forum');
+            Route::get('/category', [ForumController::class, 'category']);
+            Route::get('/category/single', [ForumController::class, 'show']);
         });
     });
 });

@@ -34,7 +34,7 @@
                             </div>
                         </div>
                         <div class="text-center mb-4">
-                            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=NewEvent&dates=20244027\&details=Aniceevent&location=Singapore" class="btn fa-2024-btn-wide">Add to calendar</a>
+                            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=RETIREMENT PLANNING WORKSHOP: Designing your retirement lifestyle&dates=20231201T000000&details=Aniceevent&location=7500A Beach Road, #02-312 The Plaza, Singapore 199591" class="btn fa-2024-btn-wide">Add to calendar</a>
                         </div>
                     </div>
                 </div>
@@ -54,7 +54,7 @@
                             </div>
                         </div>
                         <div class="text-center mb-4">
-                            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=NewEvent&dates=20244027\&details=Aniceevent&location=Singapore" class="btn fa-2024-btn-wide">Add to calendar</a>
+                            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=RETIREMENT PLANNING WORKSHOP: Designing your retirement lifestyle&dates=20241215T000000&details=Aniceevent&location=7500A Beach Road, #02-312 The Plaza, Singapore 199591" class="btn fa-2024-btn-wide">Add to calendar</a>
                         </div>
                     </div>
                 </div>
