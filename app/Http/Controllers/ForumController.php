@@ -8,6 +8,11 @@ use Inertia\Inertia;
 class ForumController extends Controller
 {
     protected $rootView = 'corporate-ui';
+
+    public function __construct()
+    {
+        Inertia::setRootView($this->rootView);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -15,9 +20,20 @@ class ForumController extends Controller
      */
     public function index()
     {
+        return Inertia::render('Admin/Forum/Index');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function category()
+    {
         Inertia::setRootView($this->rootView);
 
-        return Inertia::render('Admin/Forum/Index');
+        return Inertia::render('Admin/Forum/Category');
     }
 
     /**
@@ -47,9 +63,9 @@ class ForumController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        return Inertia::render('Admin/Forum/Show');
     }
 
     /**

@@ -36,9 +36,9 @@
 </template>
 
 <script setup>
-    import Header from './../Partials/Header';
-    import Footer from './../Partials/Footer';
+    import Header from '@shared/Partials/Header.vue';
+    import Footer from '@shared/Partials/Footer.vue';
     
-    import AppointmentModal from './../Components/AppointmentModal';
-    import FeedbackModal from './../Components/FeedbackModal';
+    import AppointmentModal from '@shared/Components/AppointmentModal.vue';
+    import FeedbackModal from '@shared/Components/FeedbackModal.vue';
 </script>

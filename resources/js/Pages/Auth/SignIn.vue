@@ -1,5 +1,5 @@
 <template>
-    <body class="finark-signin-container bg-landing-image-10">
+    <body class="finark-signin-container bg-landing-image-4">
         <div class="finark-signin-wrapper">
             <div class="finark-signin-form">
                 <div class="finark-signin-form-header">
@@ -25,7 +25,7 @@
                         </div>
                     </form>
                 </div>
-                <div class="finark-signin-others">
+                <!-- <div class="finark-signin-others">
                     <ul>
                         <li>
                             <a href="#">
@@ -33,7 +33,7 @@
                             </a>
                         </li>
                     </ul>
-                </div>
+                </div> -->
                 <div class="finark-signin-footer">
                     <a href="/"><FontAwesomeIcon icon="fa-solid fa-arrow-left-long" /> Go back to landing page</a>
                 </div>
