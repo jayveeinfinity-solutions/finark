@@ -146,6 +146,26 @@
                 line-height: normal;
                 letter-spacing: 0.19763rem;
                 text-decoration-line: underline;
+
+                @media screen and (min-width: $laptop-l) {
+                    font-size: 1.41169rem;
+                }
+                @media screen and (min-width: $mobile-s) and (max-width: $laptop-l) {
+                    font-size: 1.1rem;
+                }
+                @media screen and (min-width: 0) and (max-width: calc($mobile-s - 1px)) {
+                    font-size: 1.1rem;
+                }
+            }
+
+            @media screen and (min-width: $laptop-l) {
+                font-size: 1.41169rem;
+            }
+            @media screen and (min-width: $mobile-s) and (max-width: $laptop-l) {
+                font-size: 1rem;
+            }
+            @media screen and (min-width: 0) and (max-width: calc($mobile-s - 1px)) {
+                font-size: 1rem;
             }
         }
 
@@ -641,6 +661,7 @@
 
             &-content {
                 position: absolute;
+                width: 95%;
                 bottom: 25px;
                 left: 30px;
 

@@ -4,7 +4,7 @@
         <div class="fa-2024-bg-overlay-active"></div>
         <div class="fa-2024-services-card-active-content">
             <h4>Investment Advisory</h4>
-            <h6 class="text-truncate">Ensure a secure financial future with tailored<br>investment plans that work for you</h6>
+            <h6>Ensure a secure financial future with tailored<br>investment plans that work for you</h6>
         </div>
     </div>
     <div class="mt-5 p-4 d-flex flex-column justify-content-center" style="gap: 2.5rem;">

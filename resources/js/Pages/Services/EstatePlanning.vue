@@ -4,7 +4,7 @@
         <div class="fa-2024-bg-overlay-active"></div>
         <div class="fa-2024-services-card-active-content">
             <h4>Estate Planning</h4>
-            <h6 class="text-truncate">Plan for the future and give your loved ones the<br>certainty of financial security</h6>
+            <h6>Plan for the future and give your loved ones the<br>certainty of financial security</h6>
         </div>
     </div>
     <div class="mt-5 p-4 d-flex flex-column justify-content-center" style="gap: 2.5rem;">

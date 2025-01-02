@@ -7,7 +7,7 @@
                     <h2 class="text-start text-uppercase" style="color: #F6F6FA;font-family: Lato;font-size: 3.5rem;font-style: normal;font-weight: 900;line-height: normal;">
                         CAREERS
                     </h2>
-                    <p style="color: #F6F6FA; font-family: Lato; font-size: 2rem; font-style: normal; font-weight: 400; line-height: normal;">
+                    <p class="text-start" style="color: #F6F6FA; font-family: Lato; font-size: 2rem; font-style: normal; font-weight: 400; line-height: normal;">
                         Come join our growing team of advisors! Both new and experienced.
                     </p>
                 </div>
@@ -35,26 +35,29 @@ line-height: normal;">Join us in the world of financial services!</h1>
         <div class="row">
             <div class="col-12">
                 <div class="d-flex flex-column py-6">
-                    <div class="d-flex flex-row" style="background-image: url('storage/images/backgrounds/Group 28.png');">
-                        <div>
-                            <img src="storage/images/backgrounds/unsplash_Lks7vei-eAg.png">
+                    <div class="row d-flex flex-row" style="background-image: url('storage/images/backgrounds/Group 28.png');">
+                        <div class="col-3 d-lg-block d-none p-0">
+                            <img class="w-100" src="storage/images/backgrounds/unsplash_Lks7vei-eAg.png">
                         </div>
-                        <h3 class="w-100 text-center align-self-center" style="color: var(--White, #F6F6FA);
-        font-family: Lato;
-        font-size: 3rem;
-        font-style: normal;
-        font-weight: 900;
-        line-height: normal;">New Advisors
-        <div class="px-2 d-inline-block" style="border-radius: 2.99344rem;
-        background: var(--White, #F6F6FA);
-        color: var(--Navy-Blue, #1B3768);
-        text-align: center;
-        font-family: Lato;
-        font-size: 1rem;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 153%; /* 1.7175rem */">Activitely Hiring</div>
-        </h3>
+                        <div class="col-lg-9 col-md-12 col-sm-12 p-0 py-lg-0 py-5 d-flex align-items-center">
+                            <h3 class="w-100 text-center align-self-center" style="color: var(--White, #F6F6FA);
+                                font-family: Lato;
+                                font-size: 3rem;
+                                font-style: normal;
+                                font-weight: 900;
+                                line-height: normal;">
+                                New Advisors
+                                <div class="px-2 d-inline-block" style="border-radius: 2.99344rem;
+                                    background: var(--White, #F6F6FA);
+                                    color: var(--Navy-Blue, #1B3768);
+                                    text-align: center;
+                                    font-family: Lato;
+                                    font-size: 1rem;
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    line-height: 153%; /* 1.7175rem */">Activitely Hiring</div>
+                            </h3>
+                        </div>
                     </div>
                     <div class="py-5">
                         <p style="color: var(--Text-Grey, #747887);
@@ -83,25 +86,27 @@ line-height: normal;">Join us in the world of financial services!</h1>
             <div class="col-12">
                 <div class="d-flex flex-column py-6">
                     <div class="d-flex flex-row" style="background-image: url('storage/images/backgrounds/Group 28.png');">
-                        <div>
-                            <img src="storage/images/backgrounds/unsplash_Lks7vei-eAg.png">
+                        <div class="col-3 d-lg-block d-none p-0">
+                            <img class="w-100" src="storage/images/backgrounds/unsplash_Lks7vei-eAg.png">
                         </div>
-                        <h3 class="w-100 text-center align-self-center" style="color: var(--White, #F6F6FA);
-        font-family: Lato;
-        font-size: 3rem;
-        font-style: normal;
-        font-weight: 900;
-        line-height: normal;">Experienced Advisors
-        <div class="px-2 d-inline-block" style="border-radius: 2.99344rem;
-        background: var(--White, #F6F6FA);
-        color: var(--Navy-Blue, #1B3768);
-        text-align: center;
-        font-family: Lato;
-        font-size: 1rem;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 153%; /* 1.7175rem */">Activitely Hiring</div>
-        </h3>
+                        <div class="col-lg-9 col-md-12 col-sm-12 p-0 py-lg-0 py-5 d-flex align-items-center">
+                            <h3 class="w-100 text-center align-self-center" style="color: var(--White, #F6F6FA);
+                                font-family: Lato;
+                                font-size: 3rem;
+                                font-style: normal;
+                                font-weight: 900;
+                                line-height: normal;">Experienced Advisors
+                                <div class="px-2 d-inline-block" style="border-radius: 2.99344rem;
+                                background: var(--White, #F6F6FA);
+                                color: var(--Navy-Blue, #1B3768);
+                                text-align: center;
+                                font-family: Lato;
+                                font-size: 1rem;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 153%; /* 1.7175rem */">Activitely Hiring</div>
+                            </h3>
+                        </div>
                     </div>
                     <div class="py-5">
                         <p style="color: var(--Text-Grey, #747887);
