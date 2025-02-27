@@ -16,7 +16,7 @@
                     </div>
                     <!-- /.action-content -->
                     <div class="action-button-container">
-                        <a href="#" class="action_btn btn-ans">Ask a Question</a>
+                        <a href="/admin/forum/create" class="action_btn btn-ans">Ask a Question</a>
                     </div>
                     <!-- /.action-button-container -->
                 </div>

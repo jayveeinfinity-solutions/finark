@@ -253,6 +253,8 @@ Route::middleware('auth')->group(function() {
 */
         Route::prefix('forum')->group(function () {
             Route::get('/', [ForumController::class, 'index'])->name('admin.forum');
+            Route::get('/create', [ForumController::class, 'create'])->name('admin.forum.create');
+            Route::post('/store', [ForumController::class, 'store'])->name('admin.forum.store');
             Route::get('/category', [ForumController::class, 'category']);
             Route::get('/category/single', [ForumController::class, 'show']);
         });

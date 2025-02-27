@@ -20,7 +20,6 @@
         <link type="text/css" id="pagestyle" href="{{ asset('css/corporate-ui-dashboard.css?v=1.0.0') }}" rel="stylesheet">
         <link href="{{ asset('css/custom.css') }}" rel="stylesheet" />
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <!-- Scripts -->
         @routes
         @vite(['resources/js/app.js'])
         @vite(['resources/sass/forum.scss'])

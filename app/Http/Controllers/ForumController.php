@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Post;
 use Inertia\Inertia;
+use Illuminate\Http\Request;
+use App\Http\Requests\Forum\StorePostRequest;
 
 class ForumController extends Controller
 {
@@ -31,8 +33,6 @@ class ForumController extends Controller
      */
     public function category()
     {
-        Inertia::setRootView($this->rootView);
-
         return Inertia::render('Admin/Forum/Category');
     }
 
@@ -43,7 +43,7 @@ class ForumController extends Controller
      */
     public function create()
     {
-        //
+        return Inertia::render('Admin/Forum/Create');
     }
 
     /**
@@ -52,9 +52,11 @@ class ForumController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StorePostRequest $request)
     {
-        //
+        Post::create($request->validated());
+
+        return redirect()->back()->with('success', 'Post saved successfully!');
     }
 
     /**

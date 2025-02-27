@@ -9,6 +9,8 @@ const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
 import VueSweetalert2 from 'vue-sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
+import { QuillEditor } from '@vueup/vue-quill'
+import '@vueup/vue-quill/dist/vue-quill.snow.css';
 
 import LandingLayout from '@shared/Layouts/Landing.vue';
 import CorporateUILayout from '@shared/Layouts/CorporateUI.vue';
@@ -55,6 +57,7 @@ createInertiaApp({
             .component("Link", Link)
             .component("Head", Head)
             .component('FontAwesomeIcon', FontAwesomeIcon)
+            .component('QuillEditor', QuillEditor)
             .mount(el);
     },
     title: title => `${title} FinArk Official Website`,
