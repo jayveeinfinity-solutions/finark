@@ -44,6 +44,37 @@ return [
             'visibility' => 'public',
             'throw' => false,
         ],
+        
+        'images' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/images'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
+        'career_applications' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/career_applications'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
+        'course_posters' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/courses/posters'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
+        'chunks' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/chunks'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
+        'videos' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/videos'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
 
         's3' => [
             'driver' => 's3',
