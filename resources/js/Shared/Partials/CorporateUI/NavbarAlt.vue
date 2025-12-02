@@ -49,7 +49,7 @@
                                 <a class="dropdown-item border-radius-md" href="javascript:;">
                                     <div class="py-1 d-flex">
                                         <div class="my-auto">
-                                            <img src="https://demos.creative-tim.com/corporate-ui-dashboard-pro/assets/img/team-2.jpg" class="avatar avatar-sm  me-3 " alt="user image">
+                                            <img src="https://meyersroman.com/wp-content/uploads/2024/08/Blank-Avatar-Placeholder.png" class="avatar avatar-sm  me-3 " alt="user image">
                                         </div>
                                         <div class="d-flex flex-column justify-content-center">
                                             <h6 class="mb-1 text-sm font-weight-normal">
@@ -67,7 +67,7 @@
                                 <a class="dropdown-item border-radius-md" href="javascript:;">
                                     <div class="py-1 d-flex">
                                         <div class="my-auto">
-                                            <img src="https://demos.creative-tim.com/corporate-ui-dashboard-pro/assets/img/small-logos/logo-spotify.svg" class="avatar avatar-sm bg-gradient-dark  me-3 " alt="logo spotify">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Spotify_icon.svg/250px-Spotify_icon.svg.png" class="avatar avatar-sm bg-gradient-dark  me-3 " alt="logo spotify">
                                         </div>
                                         <div class="d-flex flex-column justify-content-center">
                                             <h6 class="mb-1 text-sm font-weight-normal">
@@ -119,7 +119,7 @@
                     <li class="nav-item dropdown d-flex align-items-center">
                         <a href="#" class="nav-link text-white font-weight-bold px-0" target="_blank">
                             <div class="avatar avatar-sm position-relative">
-                                <img src="/storage/images/brands/logo-white.png" alt="profile_image" class="w-100 border-radius-md">
+                                <img :src="$page.props.r2Endpoint + '/images/brands/logo-white.png'" alt="profile_image" class="w-100 border-radius-md">
                             </div>
                         </a>
                     </li>
@@ -128,16 +128,25 @@
             </div>
         </div>
     </nav>
-    <div class="top-0 bg-cover z-index-n1 min-height-100 max-height-200 h-25 position-absolute w-100 start-0 end-0" style="background-image: url('/storage/images/backgrounds/header-blue-purple.jpg'); background-position: bottom;"></div>
+    <div
+        class="top-0 bg-cover z-index-n1 min-height-100 max-height-200 h-25 position-absolute w-100 start-0 end-0"
+        :style="headerBackgroundStyle"
+        ></div>
 </template>
 
 <script setup>
     import { usePage } from '@inertiajs/vue3';
+    import { computed } from 'vue'
     import helpers from './../../Helpers/Functions';
 
-    const page = usePage();
+    const { url, props } = usePage();
 
-    let pages = page.url.slice(1).split("/");
+    const headerBackgroundStyle = computed(() => ({
+        backgroundImage: `url(${props.r2Endpoint}/images/backgrounds/header-blue-purple.jpg)`,
+        backgroundPosition: 'bottom'
+    }))
+
+    let pages = url.slice(1).split("/");
     let active = pages[pages.length - 1];
     pages.pop();
 </script>

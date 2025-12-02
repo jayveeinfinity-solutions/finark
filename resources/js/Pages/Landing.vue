@@ -120,7 +120,7 @@
         <div class="container-xxl mt--10 py-7">
             <div class="row py-5">
                 <div class="col-lg-6 col-md-12 col-12 mb-5 text-center align-self-lg-center">
-                    <img class="w-100" src="/storage/images/brands/Promiseland-Logo-alt-white.png">
+                    <img class="w-100" src="{{ config('r2.endpoint') }}/images/brands/Promiseland-Logo-alt-white.png">
                 </div>
                 <div class="col-lg-6 col-md-12 mt-2">
                     <h2 class="finark-landing-h2 text-uppercase text-white mb-5 text-start">Our FA Firm</h2>
@@ -139,7 +139,7 @@
             <div class="pt-lg-7 pt-6 pb-lg-7 pb-7">
                 <div class="row">
                     <div class="col-lg-5 col-md-12 col-12 text-center mb-lg-0 mb-4 pr-5 align-self-center">
-                        <img class="w-100" src="/storage/images/misc/our-business-partner-2024.png">
+                        <img class="w-100" src="{{ config('r2.endpoint') }}/images/misc/our-business-partner-2024.png">
                     </div>
                     <div class="col-lg-7 col-md-12 ps-5">
                         <h2 class="fa-2024-landing-h2 text-uppercase finark-text-primary text-start">Our business partners</h2>

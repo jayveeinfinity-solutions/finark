@@ -5,7 +5,7 @@
             <div class="row justify-content-xl-between justify-content-center">
                 <div class="col-xl-4 col-12">
                     <a href="./">
-                        <img class="w-100" src="/storage/images/brands/logo-banner-gray.png">
+                        <img class="w-100" src="{{ config('r2.endpoint') }}/images/brands/logo-banner-gray.png">
                     </a>
                 </div>
                 <div class="fa-2024-footer col-xl-8 col-12 pt-md-0 pt-5 ps-5">

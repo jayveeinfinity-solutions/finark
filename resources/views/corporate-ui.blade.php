@@ -16,7 +16,7 @@
         <script src="https://kit.fontawesome.com/349ee9c857.js" crossorigin="anonymous"></script>
         <link href="{{ asset('css/nucleo-svg.css') }}" rel="stylesheet" />
         <!-- CSS Files -->
-        <link rel="icon" type="image/png" href="{{ asset('storage/images/brands/logo.png') }}">
+        <link rel="icon" type="image/png" href="{{ config('r2.endpoint') }}/images/brands/logo.png'">
         <link type="text/css" id="pagestyle" href="{{ asset('css/corporate-ui-dashboard.css?v=1.0.0') }}" rel="stylesheet">
         <link href="{{ asset('css/custom.css') }}" rel="stylesheet" />
         <meta name="csrf-token" content="{{ csrf_token() }}">

@@ -41,7 +41,8 @@ class HandleInertiaRequests extends Middleware
                         'name' => Auth::user()->roles[0]->name
                     ]
                 ]
-            ] : NULL
+            ] : NULL,
+            'r2Endpoint' => config('r2.endpoint')
         ];
     }
 }

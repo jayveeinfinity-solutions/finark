@@ -221,7 +221,7 @@ line-height: normal;">Join us in the world of financial services!</h1>
                         </div>
                         <div class="d-flex flex-column finark-bg-primary pt-4 px-4 pb-3">
                             <div class="mb-3 d-flex justify-content-center">
-                                <img src="/storage/images/brands/logo-banner-white.png" height="48">
+                                <img src="{{ config('r2.endpoint') }}/images/brands/logo-banner-white.png" height="48">
                             </div>
                             <h2 class="fw-bold text-white text-center">Please fill up the following fields</h2>
                         </div>
