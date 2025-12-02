@@ -242,21 +242,8 @@ Route::middleware('auth')->group(function() {
             
             Route::get('/clients', [ClientController::class, 'index']);
         // });
-
-/*
-|--------------------------------------------------------------------------
-| Forum routes
-|--------------------------------------------------------------------------
-|
-| Below are routes that not restricted to consultant and unit manager
-|
-*/
-        Route::prefix('forum')->group(function () {
-            Route::get('/', [ForumController::class, 'index'])->name('admin.forum');
-            Route::get('/category', [ForumController::class, 'category']);
-            Route::get('/category/single', [ForumController::class, 'show']);
-        });
     });
 });
 
 require __DIR__.'/auth.php';
+require __DIR__.'/forum.php';

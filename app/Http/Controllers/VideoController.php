@@ -35,7 +35,7 @@ class VideoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(int $course_id = NULL)
+    public function create(?int $course_id)
     {
         Inertia::setRootView($this->layout);
 

@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Inertia\Inertia;
+use App\Models\Forum\Section;
+use Illuminate\Http\Request;
 
 class ForumController extends Controller
 {
@@ -20,7 +21,9 @@ class ForumController extends Controller
      */
     public function index()
     {
-        return Inertia::render('Admin/Forum/Index');
+        $sections = Section::all();
+        
+        return Inertia::render('Admin/Forum/Index', compact('sections'));
     }
 
     /**

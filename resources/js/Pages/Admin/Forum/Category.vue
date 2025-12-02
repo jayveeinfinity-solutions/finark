@@ -139,9 +139,9 @@
                                                 </div>
                                                 <div class="media-body">
                                                     <div class="t_title">
-                                                        <a href="/admin/forum/category/single">
+                                                        <Link :href="route('admin.forum.post.show')">
                                                             <h4>One page template</h4>
-                                                        </a>
+                                                        </Link>
                                                     </div>
                                                     <a href="#">
                                                         <h6><img src="https://html-template.spider-themes.net/docy/img/svg/hashtag.svg" alt=""> General
@@ -204,10 +204,10 @@
                                                 </div>
                                                 <div class="media-body">
                                                     <div class="t_title">
-                                                        <a href="/admin/forum/category/single">
+                                                        <Link :href="route('admin.forum.post.show')">
                                                             <h4>Support "IntelliSense" plugin for JetBrains WebStorm
                                                             </h4>
-                                                        </a>
+                                                        </Link>
                                                     </div>
                                                     <a href="#">
                                                         <h6><i class="icon_lightbulb_alt" aria-hidden="true"></i> Ideas
@@ -346,10 +346,10 @@
                                                 </div>
                                                 <div class="media-body">
                                                     <div class="t_title">
-                                                        <a href="/admin/forum/category/single">
+                                                        <Link :href="route('admin.forum.post.show')">
                                                             <h4>How to create progressbar with this tailwind css file
                                                                 upload form</h4>
-                                                        </a>
+                                                        </Link>
                                                     </div>
                                                     <a href="#">
                                                         <h6><img src="https://html-template.spider-themes.net/docy/img/svg/hashtag.svg" alt=""> General
@@ -488,11 +488,11 @@
                                                 </div>
                                                 <div class="media-body">
                                                     <div class="t_title">
-                                                        <a href="/admin/forum/category/single">
+                                                        <Link :href="route('admin.forum.post.show')">
                                                             <h4>How works and where can found the class?
                                                                 <ion-icon name="checkmark-circle" role="img" class="md hydrated" aria-label="checkmark circle"></ion-icon>
                                                             </h4>
-                                                        </a>
+                                                        </Link>
                                                     </div>
                                                     <a href="#">
                                                         <h6><i class="fa fa-futbol-o" aria-hidden="true"></i> Help
@@ -594,9 +594,9 @@
                                                 </div>
                                                 <div class="media-body">
                                                     <div class="t_title">
-                                                        <a href="/admin/forum/category/single">
+                                                        <Link :href="route('admin.forum.post.show')">
                                                             <h4>Featured Image on Mobile</h4>
-                                                        </a>
+                                                        </Link>
                                                     </div>
                                                     <a href="#">
                                                         <h6><i class="lnr lnr-users" aria-hidden="true"></i> User
@@ -660,9 +660,9 @@
                                                 </div>
                                                 <div class="media-body">
                                                     <div class="t_title">
-                                                        <a href="/admin/forum/category/single">
+                                                        <Link :href="route('admin.forum.post.show')">
                                                             <h4>Can we get Figma files for Tailwind UI components?</h4>
-                                                        </a>
+                                                        </Link>
                                                     </div>
                                                     <a href="#">
                                                         <h6><img src="https://html-template.spider-themes.net/docy/img/svg/hashtag.svg" alt=""> Ideas
@@ -725,10 +725,10 @@
                                                 </div>
                                                 <div class="media-body">
                                                     <div class="t_title">
-                                                        <a href="/admin/forum/category/single">
+                                                        <Link :href="route('admin.forum.post.show')">
                                                             <h4>Slow compile performance with Laravel Mix and npm run
                                                                 watch</h4>
-                                                        </a>
+                                                        </Link>
                                                     </div>
                                                     <a href="#">
                                                         <h6><img src="https://html-template.spider-themes.net/docy/img/svg/hashtag.svg" alt=""> General
@@ -943,9 +943,9 @@
                                                 </div>
                                                 <div class="media-body">
                                                     <div class="t_title">
-                                                        <a href="/admin/forum/category/single">
+                                                        <Link :href="route('admin.forum.post.show')">
                                                             <h4>How do correctly describe the opacity for a colors?</h4>
-                                                        </a>
+                                                        </Link>
                                                     </div>
                                                     <a href="#">
                                                         <h6><i class="fa fa-futbol-o" aria-hidden="true"></i> Help
@@ -1008,9 +1008,9 @@
                                                 </div>
                                                 <div class="media-body">
                                                     <div class="t_title">
-                                                        <a href="/admin/forum/category/single">
+                                                        <Link :href="route('admin.forum.post.show')">
                                                             <h4>Add CSS writing-mode classes to Tailwind</h4>
-                                                        </a>
+                                                        </Link>
                                                     </div>
                                                     <a href="#">
                                                         <h6><i class="lnr lnr-users" aria-hidden="true"></i> User
@@ -1074,9 +1074,9 @@
                                                 </div>
                                                 <div class="media-body">
                                                     <div class="t_title">
-                                                        <a href="/admin/forum/category/single">
+                                                        <Link :href="route('admin.forum.post.show')">
                                                             <h4>Generating docs from a custom tailwind.config.js</h4>
-                                                        </a>
+                                                        </Link>
                                                     </div>
                                                     <a href="#">
                                                         <h6><i class="icon_lightbulb_alt" aria-hidden="true"></i> Ideas

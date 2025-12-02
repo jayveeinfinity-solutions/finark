@@ -1,7 +1,7 @@
 import '../sass/app.scss';
 import 'bootstrap';
 
-import { createInertiaApp, Head, Link } from '@inertiajs/vue3';
+import { createInertiaApp, Head, Link } from '@inertiajs/vue3'
 import { createApp, h } from 'vue';
 import { ZiggyVue } from '../../vendor/tightenco/ziggy';
 
@@ -30,8 +30,6 @@ createInertiaApp({
 
         // Resolve the page based on its name
         const page = pages[`./Pages/${name}.vue`];
-
-        console.log(page)
 
         // Throw an error if the page does not exist
         if (!page) {

@@ -1,3 +1,14 @@
+<script setup>
+    import AdminHeader from '@shared/Partials/CorporateUI/AdminHeader.vue';
+
+    const props = defineProps({
+        sections: {
+            type: Object,
+            required: true,
+        },
+    })
+</script>
+
 <template>
     <Head title="Forum &sdot; " />
     <div class="container-fluid py-4 px-5">
@@ -35,25 +46,26 @@
                     <!-- /.support-category-menus -->
                 </div>
                 <div class="community-posts-wrapper bb-radius">
-                    <div class="community-post style-two forum-item bug">
+                    <div class="community-post style-two forum-item bug"
+                        v-for="section in sections.data" :key="section.id">
                         <div class="col-md-6 post-content">
-                            <div class="author-avatar forum-icon text-center">
-                                <FontAwesomeIcon icon="fa-solid fa-bullhorn" class="text-danger fa-4xl" />
+                            <div class="author-avatar forum-icon text-center h-100">
+                                <FontAwesomeIcon :icon="section.icon" class="fa-4xl" :class="section.icon_class" />
                             </div>
                             <div class="entry-content">
-                                <a href="/admin/forum/category"> <h3 class="post-title"> Announcements </h3> </a>
-                                <p>This forum features announcements. If there is a new post in this forum, please check it out.</p>
+                                <a :href="`/admin/forum/${section.slug}`"> <h3 class="post-title">{{ section.name }}</h3></a>
+                                <p>{{ section.description }}</p>
                             </div>
                         </div>
                         <div class="col-md-6 post-meta-wrapper">
-                            <ul class="forum-titles">
-                                <li class="forum-topic-count">10</li>
-                                <li class="forum-reply-count">105</li>
+                            <ul class="forum-titles align-items-center">
+                                <li class="forum-topic-count">{{ section.threads_count }}</li>
+                                <li class="forum-reply-count">{{ section.replies_count }}</li>
                                 <li class="forum-freshness">
                                     <div class="freshness-box">
                                         <div class="freshness-top">
                                             <div class="freshness-link">
-                                                <a href="#" title="Reply To: Main Forum Rules &amp; Policies">2 years, 2 months ago</a>
+                                                <a href="#" title="Reply To: Main Forum Rules &amp; Policies">{{ section.last_activity_at ?? "None" }}</a>
                                             </div>
                                         </div>
                                         <div class="freshness-btm">
@@ -65,7 +77,7 @@
                                                 </a>
                                             </div>
                                             <span class="bbp-author-avatar">
-                                                <img alt="Eh Jewel" src="https://html-template.spider-themes.net/docy/img/home_support/cp5.jpg">
+                                                <img alt="Eh Jewel" src="https://meyersroman.com/wp-content/uploads/2024/08/Blank-Avatar-Placeholder.png">
                                             </span>
                                         </div>
                                     </div>
@@ -73,7 +85,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="community-post style-two forum-item bug">
+                    <!-- <div class="community-post style-two forum-item bug">
                         <div class="col-md-6 post-content">
                             <div class="author-avatar forum-icon text-center">
                                 <FontAwesomeIcon icon="fa-solid fa-coffee" class="text-success fa-4xl" />
@@ -186,7 +198,7 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="col-lg-3">
@@ -267,7 +279,3 @@
         text-decoration: none !important;
     }
 </style>
-
-<script setup>
-    import AdminHeader from '@shared/Partials/CorporateUI/AdminHeader.vue';
-</script>

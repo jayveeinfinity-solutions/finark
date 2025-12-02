@@ -3,7 +3,7 @@
         <div class="sidenav-header">
             <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
             <a class="navbar-brand d-flex align-items-center m-0" href="/admin">
-                <img src="/storage/images/brands/logo-banner-white.png" />
+                <img :src="$page.props.r2Endpoint + '/images/brands/logo-banner-white.png'" />
                 <!-- <span class="font-weight-bold text-lg">FinArk</span> -->
             </a>
         </div>
@@ -18,7 +18,7 @@
                     </Link>
                 </li>
                 <li class="nav-item">
-                    <Link class="nav-link active" href="/admin/forum">
+                    <Link :href="route('admin.forum.sections.index')" class="nav-link active">
                         <div class="icon icon-shape icon-sm px-0 text-center d-flex align-items-center justify-content-center">
                             <FontAwesomeIcon icon="fa-solid fa-comments" class="text-white" />
                         </div>
