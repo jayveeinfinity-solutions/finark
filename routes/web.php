@@ -20,6 +20,7 @@ use App\Http\Controllers\ClientController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\FeedbackController;
+use App\Http\Controllers\TestPostController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\WatchVideoController;
 use App\Http\Controllers\AppointmentController;
@@ -42,6 +43,12 @@ use App\Http\Controllers\AppointmentController;
 //     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
 //     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 // });
+
+Route::get('/test', [TestPostController::class, 'index']);
+Route::get('/test/create', [TestPostController::class, 'create']);
+Route::get('/test/post/{testPost}', [TestPostController::class, 'edit']);
+Route::post('/test/store', [TestPostController::class, 'store']);
+Route::put('/test/post/{testPost}', [TestPostController::class, 'update']);
 
 Route::get('/', function () {
     $groups = PartnerGroups::where('active', 1)->orderBy('sequence')->get();

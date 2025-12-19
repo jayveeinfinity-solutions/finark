@@ -5,10 +5,13 @@ import { createInertiaApp, Head, Link } from '@inertiajs/vue3'
 import { createApp, h } from 'vue';
 import { ZiggyVue } from '../../vendor/tightenco/ziggy';
 
-const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
+const appName = import.meta.env.VITE_APP_NAME || 'FinArk';
 
 import VueSweetalert2 from 'vue-sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
+
+// import { QuillEditor } from '@vueup/vue-quill'
+// import '@vueup/vue-quill/dist/vue-quill.snow.css';
 
 import LandingLayout from '@shared/Layouts/Landing.vue';
 import CorporateUILayout from '@shared/Layouts/CorporateUI.vue';
@@ -23,7 +26,7 @@ library.add(faRightToBracket, faAngleLeft, faAngleRight, faLocationDot, faMoneyB
 // End Region
 
 createInertiaApp({
-    title: (title) => `${title} - ${appName}`,
+    title: (title) => `${title} &sdot; ${appName} Official Website`,
     resolve: async (name) => {
         // Import all pages eagerly
         const pages = import.meta.glob('./Pages/**/*.vue', { eager: true });
@@ -52,10 +55,10 @@ createInertiaApp({
             .use(VueSweetalert2)
             .component("Link", Link)
             .component("Head", Head)
-            .component('FontAwesomeIcon', FontAwesomeIcon)
+            .component("FontAwesomeIcon", FontAwesomeIcon)
+            // .component("QuillEditor", QuillEditor)
             .mount(el);
     },
-    title: title => `${title} FinArk Official Website`,
     progress: {
         color: '#4B5563',
     },

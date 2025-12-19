@@ -29,9 +29,10 @@
                                     <div class="mt-3 row">
                                         <div class="mt-3 col-12 col-sm-12 mt-sm-0">
                                             <label>Description</label>
-                                            <div class="editor-container mb-5">
+                                            <!-- <div class="editor-container mb-5">
                                                 <QuillEditor :options="options" theme="snow" toolbar="minimal" @editorChange="editorChange" ref="quillEditor" />
-                                            </div>
+                                            </div> -->
+                                            <textarea v-model="form.description"></textarea>
                                         </div>
                                     </div>
                                     <div class="mt-3 row">

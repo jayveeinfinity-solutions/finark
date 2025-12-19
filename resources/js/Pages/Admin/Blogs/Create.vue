@@ -78,7 +78,7 @@
 
 <script setup>
   import Footer from '@shared/Partials/CorporateUI/Footer.vue';
-  import ImageUploader from 'quill-image-uploader';
+  // import ImageUploader from 'quill-image-uploader';
   import { router } from '@inertiajs/vue3';
 
   const modules = {

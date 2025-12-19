@@ -42,7 +42,11 @@ class HandleInertiaRequests extends Middleware
                     ]
                 ]
             ] : NULL,
-            'r2Endpoint' => config('r2.endpoint')
+            'r2Endpoint' => config('r2.endpoint'),
+            'flash' => [
+                'success' => $request->session()->get('success'),
+                'error'   => $request->session()->get('error'),
+            ],
         ];
     }
 }
