@@ -8,7 +8,9 @@
 import { ref, onMounted, watch } from "vue";
 import Quill from "quill";
 import "quill/dist/quill.snow.css";
-import "quill-mention";
+
+import 'quill-mention';
+import 'quill-mention/dist/quill.mention.css';
 
 const props = defineProps({
   modelValue: {

@@ -50,6 +50,13 @@
                         </Link>
                     </div>
                     <div class="post-body">
+                        <div class="post-details">
+                            <img class="rounded-circle" src="https://randomuser.me/api/portraits/thumb/women/74.jpg">
+                            <div>
+                                <span class="post-user">Random User</span>
+                                <span class="post-date">December 23, 2025</span>
+                            </div>
+                        </div>
                         <div class="post-content" v-html="testPost.content" @click="handleMentionClick"></div>
                     </div>
                 </div>
@@ -113,7 +120,9 @@
         /* Paragraph */
         p {
             margin: 0 0 0.75rem 0;
-            font-size: 12px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1rem;
         }
 
         /* Lists */
@@ -123,7 +132,10 @@
         }
 
         li {
+            font-size: 14px;
+            font-weight: 400;
             margin: 0.25rem 0;
+            line-height: 1rem;
         }
 
         /* Inline text */
@@ -188,6 +200,33 @@
         /* Remove last margin */
         > *:last-child {
             margin-bottom: 0;
+        }
+    }
+    .post-details {
+        display: flex;
+        flex-direction: row;
+        gap: 0.75rem;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        img {
+            margin-top: 2px;
+            height: 36px;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        span.post-user {
+            font-weight: 500;
+        }
+        
+        span.post-date {
+            font-size: 12px;
+            font-weight: 500;
+            color: grey;
         }
     }
 </style>
