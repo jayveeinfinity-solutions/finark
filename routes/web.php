@@ -1,16 +1,12 @@
 <?php
 
-use Carbon\Carbon;
 use Inertia\Inertia;
 use App\Models\Partner;
 use App\Models\Feedback;
 use App\Models\Appointment;
-use App\Models\PartnerGroups;
 use App\Models\CareerApplication;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Models\PartnerGroupReferences;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\VideoController;
@@ -18,6 +14,7 @@ use App\Http\Controllers\CareerController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\PartnerController;
+use App\Http\Controllers\ExtranetController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\IntranetController;
 use App\Http\Controllers\Auth\LoginController;
@@ -60,122 +57,26 @@ Route::prefix('intranet')
         Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
 });
 
-Route::get('/', function() {
-    $groups = PartnerGroups::where('active', 1)->orderBy('sequence')->get();
-    $partner_group_references = PartnerGroupReferences::select(DB::raw('partner_group_id AS id, COUNT(*) AS count'))->groupBy('partner_group_id')->get();
-    
-    $data = [];
-    $i = 0;
-    foreach($groups as $group) {
-        $temp = [];
-        $temp['id'] = $group->id;
-        $temp['name'] = $group->name;
-        $temp['icon'] = $group->icon;
-        $temp['sequence'] = ($i < 3 ? $i : ($i + 1)) + 1;
-        $temp['lg'] = $i < 3 ? TRUE : FALSE;
-        $temp['col'] = $i < 4 ? 1 : 2;
+Route::name('extranet.')->group(function() {
+    Route::get('/', [ExtranetController::class, 'landing'])->name('landing');
+    Route::get('/about', [ExtranetController::class, 'about'])->name('about');
+    Route::get('/services', [ExtranetController::class, 'services'])->name('services');
+    Route::get('/services/{slug}', [ExtranetController::class, 'service'])->name('service');
+    Route::post('/appointment/timeslots', [AppointmentController::class, 'getAvailableTimeSlots']);
+    Route::get('/events', [ExtranetController::class, 'events'])->name('events');
+    Route::get('/blogs', [ExtranetController::class, 'blogs'])->name('blogs');
+    Route::get('/careers', [ExtranetController::class, 'careers'])->name('careers');
+    Route::get('/contacts', [ExtranetController::class, 'contacts'])->name('contacts');
+    Route::get('/partners', [ExtranetController::class, 'partners'])->name('partners');
 
-        foreach($partner_group_references as $pgr) {
-            if($group->id == $pgr->id) {
-                $temp['count'] = $pgr->count;
-                break;
-            }
-        }
-        $i++;
-        $data[] = $temp;
-    }
+    Route::post('/appointment/store', [AppointmentController::class, 'store']);
+    Route::post('/feedback/store', [FeedbackController::class, 'store']);
+    Route::post('/careers/store', [CareerController::class, 'store']);
 
-    $data[] = [
-        'id' => 0,
-        'name' => "Bank Partners",
-        'icon' => $data[3]['icon'],
-        'sequence' => 4,
-        'count' => $data[3]['count'] + $data[4]['count'],
-        'lg' => FALSE,
-        'col' => 0
-    ];
-
-    usort($data, fn($x, $y) => $x['sequence'] <=> $y['sequence']);
-
-    return Inertia::render('Landing', [
-        'groups' => $data
-    ]);
+    Route::get('/signin', [LoginController::class, 'index'])->name('signin');
+    Route::post('/auth', [LoginController::class, 'auth'])->name('auth');
+    Route::get('/signout', [LoginController::class, 'deauth'])->name('deauth');
 });
-Route::get('/about', function() {
-    return Inertia::render('About');
-});
-Route::get('/services', function() {
-    return Inertia::render('Services');
-});
-Route::get('/services/{slug}', function(string $slug) {
-    $dateToday = Carbon::now()->addDays(1);
-
-    if($dateToday->isSaturday()) {
-        $dateToday->addDays(2);
-    }
-    if($dateToday->isSunday()) {
-        $dateToday->addDays(1);
-    }
-
-    return Inertia::render('Service', [
-        'service' => $slug,
-        'minDate' => $dateToday->format('Y-m-d')
-    ]);
-});
-Route::post('/appointment/timeslots', [AppointmentController::class, 'getAvailableTimeSlots']);
-Route::get('/events', function () {
-    return Inertia::render('Events');
-});
-Route::get('/blogs', function () {
-    return Inertia::render('Blogs');
-});
-Route::get('/careers', function () {
-    return Inertia::render('Careers');
-});
-Route::get('/contacts', function () {
-    return Inertia::render('Contact');
-});
-Route::get('/partners', function () {
-    $groups = PartnerGroups::where('active', 1)->orderBy('sequence')->get();
-    $partners = Partner::where('active', 1)->orderBy('name')->get();
-
-    $groups = $groups->map(function($group) {
-        return [
-            'id' => $group->id,
-            'name' => $group->name,
-            'isActive' => false
-        ];
-    });
-
-    $partners = $partners->map(function($partner) {
-        $partner_group_references = PartnerGroupReferences::select('partner_group_id')->where('partner_id', $partner->id)->get();
-        $groups = [];
-        foreach($partner_group_references as $pgr) {
-            $groups[] = $pgr->partner_group_id;
-        }
-
-        return [
-            'id' => $partner->id,
-            'name' => $partner->name,
-            'logo' => $partner->web_logo,
-            'url' => $partner->web_url,
-            'groups' => implode(',', $groups)
-        ];
-    });
-
-    return Inertia::render('Partners', [
-        'groups' => $groups,
-        'partners' => $partners
-    ]);
-});
-
-Route::post('/appointment/store', [AppointmentController::class, 'store']);
-Route::post('/feedback/store', [FeedbackController::class, 'store']);
-Route::post('/careers/store', [CareerController::class, 'store']);
-
-Route::get('/signin', [LoginController::class, 'index'])->name('signin');
-Route::post('/auth', [LoginController::class, 'auth'])->name('auth');
-Route::get('/signout', [LoginController::class, 'deauth'])->name('deauth');
 
 Route::middleware('auth')->group(function() {
     Route::prefix('admin')->group(function () {
