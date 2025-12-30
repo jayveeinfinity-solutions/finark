@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Forum;
+namespace App\Http\Controllers;
 
 use Inertia\Inertia;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
-class PostController extends Controller
+class IntranetController extends Controller
 {
     public function __construct() {
         Inertia::setRootView('forum');
@@ -15,9 +14,24 @@ class PostController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function dashboard()
     {
-        //
+        return Inertia::render('Intranet/Dashboard');
+    }
+
+    public function discussions()
+    {
+        return Inertia::render('Intranet/Discussions/Index');
+    }
+
+    public function courses()
+    {
+        return Inertia::render('Intranet/Courses/Index');
+    }
+
+    public function signin()
+    {
+        return Inertia::render('Intranet/Signin');
     }
 
     /**
@@ -25,7 +39,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        return Inertia::render('Intranet/Posts/Create');
+        //
     }
 
     /**
@@ -39,9 +53,9 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show()
+    public function show(string $id)
     {
-        return Inertia::render('Admin/Forum/Show');
+        //
     }
 
     /**

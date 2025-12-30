@@ -27,14 +27,14 @@ class LoginController extends Controller
         }
         
         if (Auth::attempt($request->validated())) {
-            $request->session()->regenerate();
- 
-            return Inertia::render('Auth/SignIn', ['status' => "success"]);
+             return back()->withErrors([
+                'auth' => 'The provided credentials do not match our records.',
+            ]);
         }
- 
-        return back()->withErrors([
-            'email' => 'The provided credentials do not match our records.',
-        ])->onlyInput('email');
+
+        $request->session()->regenerate();
+
+        return redirect()->route('admin.dashboard');
     }
 
     public function deauth(Request $request) {

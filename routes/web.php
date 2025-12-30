@@ -13,14 +13,15 @@ use Illuminate\Support\Facades\Route;
 use App\Models\PartnerGroupReferences;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\ForumController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\CareerController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\FeedbackController;
+use App\Http\Controllers\IntranetController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Forum\PostController;
 use App\Http\Controllers\WatchVideoController;
 use App\Http\Controllers\AppointmentController;
 
@@ -43,7 +44,23 @@ use App\Http\Controllers\AppointmentController;
 //     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 // });
 
-Route::get('/', function () {
+Route::prefix('intranet')
+    ->name('intranet.')
+    ->group(function() {
+        Route::get('/signin', [IntranetController::class, 'signin'])->name('signin');
+
+        Route::get('/', function() {
+            return redirect(route('intranet.dashboard'));
+        });
+        Route::get('/dashboard', [IntranetController::class, 'dashboard'])->name('dashboard');
+        Route::get('/discussions', [IntranetController::class, 'discussions'])->name('discussions');
+        Route::get('/courses', [IntranetController::class, 'courses'])->name('courses');
+        Route::get('/okr', [IntranetController::class, 'okr'])->name('okr');
+        
+        Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
+});
+
+Route::get('/', function() {
     $groups = PartnerGroups::where('active', 1)->orderBy('sequence')->get();
     $partner_group_references = PartnerGroupReferences::select(DB::raw('partner_group_id AS id, COUNT(*) AS count'))->groupBy('partner_group_id')->get();
     
@@ -84,10 +101,10 @@ Route::get('/', function () {
         'groups' => $data
     ]);
 });
-Route::get('/about', function () {
+Route::get('/about', function() {
     return Inertia::render('About');
 });
-Route::get('/services', function () {
+Route::get('/services', function() {
     return Inertia::render('Services');
 });
 Route::get('/services/{slug}', function(string $slug) {
@@ -169,7 +186,7 @@ Route::middleware('auth')->group(function() {
             } else {
                 return redirect('/admin/forum');
             }
-        });
+        })->name('admin.dashboard');
         Route::get('/courses', [CourseController::class, 'index']);
         Route::get('/courses/{id}', [CourseController::class, 'show'])->where('id', '[0-9]+');
         Route::get('/courses/posters/{course}', [CourseController::class , 'getPoster']);
