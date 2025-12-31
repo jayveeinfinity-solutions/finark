@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('polls', function (Blueprint $table) {
             $table->id();
             $table->foreignId('post_id')->constrained()->cascadeOnDelete();
-            $table->string('question');
             $table->boolean('allow_multiple_answers')->default(false);
             $table->timestamps();
         });

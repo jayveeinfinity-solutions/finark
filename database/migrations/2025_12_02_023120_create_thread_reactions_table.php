@@ -11,13 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('poll_options', function (Blueprint $table) {
+        Schema::create('thread_reactions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('poll_id')->constrained()->cascadeOnDelete();
-            $table->string('label');
-            $table->string('text');
-            $table->unsignedInteger('votes_count')->default(0);
+            $table->foreignId('thread_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            $table->enum('type', ['like', 'love', 'haha', 'insight', 'celebrate']);
             $table->timestamps();
+
+            $table->unique(['thread_id', 'user_id', 'type']); 
         });
     }
 
@@ -26,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('poll_options');
+        Schema::dropIfExists('thread_reactions');
     }
 };

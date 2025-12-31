@@ -3,8 +3,13 @@
 namespace App\Http\Controllers\Forum;
 
 use Inertia\Inertia;
+use App\Models\Forum\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Services\Forum\PollService;
 use App\Http\Controllers\Controller;
+use App\Services\Forum\ThreadService;
+use App\Http\Requests\Post\StorePostRequest;
 
 class PostController extends Controller
 {
@@ -31,9 +36,33 @@ class PostController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
-    {
-        //
+    public function store(
+        StorePostRequest $request,
+        ThreadService $threadService,
+        PollService $pollService
+    ) {
+        return DB::transaction(function () use ($request, $threadService, $pollService) {
+
+            // Base post
+            $post = Post::create([
+                'user_id' => $request->user()->id,
+                'type' => $request->type,
+                'title' => $request->title,
+                'content' => $request->type === 'thread'
+                    ? $request->content
+                    : null,
+            ]);
+
+            // Delegate logic
+            match ($post->type) {
+                'thread' => $threadService->create($post, $request),
+                'poll' => $pollService->create($post, $request->options),
+            };
+
+            return redirect()
+                ->route('posts.show', $post)
+                ->with('success', 'Post created successfully.');
+        });
     }
 
     /**

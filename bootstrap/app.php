@@ -3,6 +3,7 @@
 use Illuminate\Foundation\Application;
 use App\Http\Middleware\AuditLogMiddleware;
 use App\Http\Middleware\HandleInertiaRequests;
+use App\Http\Middleware\RedirectAdminByRole;
 use Spatie\Permission\Middleware\RoleMiddleware;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -26,7 +27,8 @@ return Application::configure(basePath: dirname(__DIR__))
             'role' => RoleMiddleware::class,
             'permission' => PermissionMiddleware::class,
             'role_or_permission' => RoleOrPermissionMiddleware::class,
-            'forum.audit' => AuditLogMiddleware::class
+            'forum.audit' => AuditLogMiddleware::class,
+            'redirect_admin_by_role' => RedirectAdminByRole::class
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {

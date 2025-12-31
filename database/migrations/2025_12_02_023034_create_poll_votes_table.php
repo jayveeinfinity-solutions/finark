@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('poll_votes', function (Blueprint $table) {
             $table->id();
             $table->foreignId('poll_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('option_id')->constrained('poll_options')->cascadeOnDelete();
+            $table->foreignId('poll_option_id')->constrained('poll_options')->cascadeOnDelete();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->timestamps();
             

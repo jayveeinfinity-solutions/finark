@@ -1,10 +1,17 @@
+<script setup>
+    const r2Endpoint = import.meta.env.VITE_R2_ENDPOINT;
+</script>
+
 <template>
     <header class="flex h-16 shrink-0 items-center justify-between border-b border-border-light bg-white px-6 lg:px-8 shadow-sm z-10">
         <div class="flex items-center gap-4 lg:hidden">
             <button class="text-text-main">
                 <span class="material-symbols-outlined">menu</span>
             </button>
-            <span class="text-lg font-bold text-primary">FinArk</span>
+            <!-- <span class="text-lg font-bold text-primary">FinArk</span> -->
+            <div class="h-[36px]">
+                <img :src="`${r2Endpoint}/images/brands/logo-banner.png`" class="h-full w-auto object-contain" alt="Logo">
+            </div>
         </div>
         <div class="hidden flex-1 items-center gap-4 lg:flex">
             <h2 class="text-lg font-bold text-text-main tracking-tight">Dashboard</h2>

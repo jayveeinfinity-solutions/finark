@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('section_id')->constrained()->cascadeOnDelete();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->string('title');
-            $table->longText('body')->nullable();
+            $table->longText('content')->nullable();
             $table->enum('type', ['thread', 'poll'])->default('thread');
             $table->boolean('is_pinned')->default(false);
             $table->boolean('is_locked')->default(false);

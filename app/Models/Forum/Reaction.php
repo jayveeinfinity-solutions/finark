@@ -6,17 +6,17 @@ use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class PostReaction extends Model
+class Reaction extends Model
 {
     protected $fillable = [
-        'post_id',
+        'thread_id',
         'user_id',
         'reaction'
     ];
 
-    public function post(): BelongsTo
+    public function thread(): BelongsTo
     {
-        return $this->belongsTo(Post::class);
+        return $this->belongsTo(Thread::class);
     }
 
     public function user(): BelongsTo

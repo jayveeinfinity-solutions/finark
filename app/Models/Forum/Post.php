@@ -15,7 +15,7 @@ class Post extends Model
         'section_id',
         'user_id',
         'title',
-        'body',
+        'content',
         'type',
         'is_pinned',
         'is_locked',
@@ -31,23 +31,13 @@ class Post extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function comments(): HasMany
+    public function thread()
     {
-        return $this->hasMany(Comment::class);
+        return $this->hasOne(Thread::class);
     }
 
-    public function poll(): HasOne
+    public function poll()
     {
         return $this->hasOne(Poll::class);
-    }
-
-    public function attachments(): MorphMany
-    {
-        return $this->morphMany(Attachment::class, 'attachable');
-    }
-
-    public function reactions(): HasMany
-    {
-        return $this->hasMany(PostReaction::class);
     }
 }

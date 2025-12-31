@@ -55,6 +55,7 @@ Route::prefix('intranet')
         Route::get('/okr', [IntranetController::class, 'okr'])->name('okr');
         
         Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
+        Route::post('/posts', [PostController::class, 'store'])->name('posts.store');      
 });
 
 Route::name('extranet.')->group(function() {
@@ -80,14 +81,9 @@ Route::name('extranet.')->group(function() {
 
 Route::middleware('auth')->group(function() {
     Route::prefix('admin')->group(function () {
-        Route::get('/', function() {
-            $user = Auth::user();
-            if(in_array($user->roles->first()->name, ['developer', 'admin', 'virtual-assistant'])) {
-                return redirect('/admin/dashboard');
-            } else {
-                return redirect('/admin/forum');
-            }
-        })->name('admin.dashboard');
+        Route::get('/', fn () => null)
+            ->middleware('redirect_admin_by_role')
+            ->name('admin.index');
         Route::get('/courses', [CourseController::class, 'index']);
         Route::get('/courses/{id}', [CourseController::class, 'show'])->where('id', '[0-9]+');
         Route::get('/courses/posters/{course}', [CourseController::class , 'getPoster']);

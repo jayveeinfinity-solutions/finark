@@ -8,7 +8,18 @@
         layout: ForumLayout
     });
 
-    const selectedTab = ref('post');
+    const selectedTab = ref('thread');
+    const threadRef = ref('thread');
+    const pollRef = ref('poll');
+
+    const submit = () => {
+        if(selectedTab.value === 'thread') {
+            threadRef.value?.submit();
+        }
+        if(selectedTab.value === 'poll') {
+            pollRef.value?.submit();
+        }
+    }
 </script>
 
 <template>
@@ -47,8 +58,8 @@
                         </button>
                     </div>
 
-                    <CreatePost v-show="selectedTab === 'post'" />
-                    <CreatePoll v-show="selectedTab === 'poll'" />
+                    <CreatePost v-show="selectedTab === 'post'" ref="threadRef" />
+                    <CreatePoll v-show="selectedTab === 'poll'" ref="pollRef" />
 
                     <div class="bg-slate-50 px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-200">
                         <div class="flex items-center gap-2 text-xs text-slate-500">
@@ -56,12 +67,16 @@
                             <span>Visible to: <strong class="text-slate-700">All Advisors</strong></span>
                         </div>
                         <div class="flex items-center gap-3 w-full sm:w-auto">
-                            <button class="flex-1 sm:flex-none px-4 py-2 rounded-lg border border-slate-300 bg-white text-sm font-semibold text-slate-700 shadow-sm hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-all" type="button">
+                            <button class="flex-1 sm:flex-none px-4 py-2 rounded-lg border border-slate-300 bg-white text-sm font-semibold text-slate-700 shadow-sm hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-all" type="button"  v-show="selectedTab === 'thread'">
                                 Save Draft
                             </button>
-                            <button class="flex-1 sm:flex-none px-5 py-2 rounded-lg bg-primary text-sm font-bold text-white shadow-md hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-all flex items-center justify-center gap-2" type="button">
+                            <button class="flex-1 sm:flex-none px-5 py-2 rounded-lg bg-primary text-sm font-bold text-white shadow-md hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-all flex items-center justify-center gap-2" type="button" @click="submit" v-show="selectedTab === 'thread'">
                                 Publish Post
                                 <span class="material-symbols-outlined text-[18px]">send</span>
+                            </button>
+                            <button class="px-8 py-3 rounded-lg bg-primary hover:bg-primary-hover text-white font-bold shadow-lg shadow-blue-900/20 transition-all w-full md:w-auto flex items-center justify-center gap-2" type="button"  @click="submit" v-show="selectedTab === 'poll'">
+                                Publish Poll
+                                <span class="material-symbols-outlined text-[20px]">send</span>
                             </button>
                         </div>
                     </div>
