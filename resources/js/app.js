@@ -3,7 +3,8 @@ import 'bootstrap';
 
 import { createInertiaApp, Head, Link } from '@inertiajs/vue3'
 import { createApp, h } from 'vue';
-import { ZiggyVue } from '../../vendor/tightenco/ziggy';
+// import { ZiggyVue } from '../../vendor/tightenco/ziggy';
+import { ZiggyVue } from 'ziggy-js';
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
@@ -23,7 +24,23 @@ library.add(faRightToBracket, faAngleLeft, faAngleRight, faLocationDot, faMoneyB
 // End Region
 
 createInertiaApp({
-    title: (title) => `${title} - ${appName}`,
+    defaults: {
+        form: {
+            recentlySuccessfulDuration: 5000,
+        },
+        prefetch: {
+            cacheFor: "1m",
+            hoverDelay: 150,
+        },
+        visitOptions: (href, options) => {
+            return {
+                headers: {
+                    ...options.headers
+                },
+            };
+        },
+    },
+    title: (title) => `${title} &sdot; ${appName}`,
     resolve: async (name) => {
         // Import all pages eagerly
         const pages = import.meta.glob('./Pages/**/*.vue', { eager: true });
@@ -55,7 +72,6 @@ createInertiaApp({
             .component('FontAwesomeIcon', FontAwesomeIcon)
             .mount(el);
     },
-    title: title => `${title} FinArk Official Website`,
     progress: {
         color: '#4B5563',
     },

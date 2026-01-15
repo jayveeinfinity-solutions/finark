@@ -1,9 +1,49 @@
 <script setup>
+    import { ref } from 'vue';
+    import { useForm } from '@inertiajs/vue3';
     import ForumLayout from '@shared/Layouts/Intranet/Forum.vue';
+
+    const props = defineProps({
+        poll: Object,
+        options: Array,
+    });
 
     defineOptions({
         layout: ForumLayout
     });
+
+    const selectedOption = ref(props.userVotedOptionId || null);
+
+    const form = useForm({
+        option_id: null
+    })
+
+    const pollVote = async (pollId, optionId, userId) => {
+        // If user clicked same option, do nothing
+        // if (selectedOption.value === optionId) return;
+
+        form.option_id = optionId;
+
+        form.post(route('intranet.polls.vote', pollId), {
+            onSuccess: (page) => {
+                // Update local state
+                // selectedOption.value = optionId;
+                form.option_id = null;
+
+                // Update votes_count and percentages
+                // if (page.props.poll) {
+                //     page.props.poll.options.forEach((opt, index) => {
+                //         props.options[index].votes = opt.votes_count;
+                //     });
+
+                //     const totalVotes = props.options.reduce((sum, o) => sum + o.votes, 0);
+                //     props.options.forEach(opt => {
+                //         opt.percentage = totalVotes > 0 ? ((opt.votes / totalVotes) * 100).toFixed(2) : 0;
+                //     });
+                // }
+            }
+        })
+    }
 </script>
 
 <template>
@@ -231,24 +271,14 @@
                     <div class="rounded-xl bg-white p-4 shadow-sm ring-1 ring-black/5">
                         <div class="mb-4 flex items-center gap-2">
                             <span class="material-symbols-outlined text-primary">poll</span>
-                            <h3 class="text-base font-bold text-text-main">Advisor Sentinel Poll</h3>
+                            <h3 class="text-base font-bold text-text-main">Poll of the day</h3>
                         </div>
-                        <p class="mb-5 text-sm font-semibold text-text-main leading-snug">What is your outlook on emerging markets for 2024?</p>
+                        <p class="mb-4 text-sm font-semibold text-text-main leading-snug">{{ poll.title }}</p>
                         <div class="space-y-3">
-                            <button class="relative flex w-full items-center justify-between overflow-hidden rounded-lg bg-gray-50 border border-gray-100 px-4 py-2.5 text-left text-sm text-text-main hover:bg-white hover:border-gray-300 transition-all group">
-                                <span class="relative z-10 font-medium">Bullish</span>
-                                <span class="relative z-10 text-xs text-text-muted font-mono font-bold group-hover:text-text-main">45%</span>
-                                <div class="absolute bottom-0 left-0 top-0 bg-blue-100/50 transition-all duration-500 border-r border-blue-200" style="width: 45%"></div>
-                            </button>
-                            <button class="relative flex w-full items-center justify-between overflow-hidden rounded-lg bg-gray-50 border border-gray-100 px-4 py-2.5 text-left text-sm text-text-main hover:bg-white hover:border-gray-300 transition-all group">
-                                <span class="relative z-10 font-medium">Neutral</span>
-                                <span class="relative z-10 text-xs text-text-muted font-mono font-bold group-hover:text-text-main">30%</span>
-                                <div class="absolute bottom-0 left-0 top-0 bg-blue-100/50 transition-all duration-500 border-r border-blue-200" style="width: 30%"></div>
-                            </button>
-                            <button class="relative flex w-full items-center justify-between overflow-hidden rounded-lg bg-gray-50 border border-gray-100 px-4 py-2.5 text-left text-sm text-text-main hover:bg-white hover:border-gray-300 transition-all group">
-                                <span class="relative z-10 font-medium">Bearish</span>
-                                <span class="relative z-10 text-xs text-text-muted font-mono font-bold group-hover:text-text-main">25%</span>
-                                <div class="absolute bottom-0 left-0 top-0 bg-blue-100/50 transition-all duration-500 border-r border-blue-200" style="width: 25%"></div>
+                            <button type="button" class="relative flex w-full items-center justify-between overflow-hidden rounded-lg bg-gray-50 border border-gray-100 px-4 py-2.5 text-left text-sm text-text-main hover:bg-white hover:border-gray-300 transition-all group" v-for="(option, index) in options" :key="option.id" @click="pollVote(poll.poll.id, option.id, 1)">
+                                <span class="relative z-10 font-medium">{{ `${option.label}. ${option.text}` }}</span>
+                                <span class="relative z-10 text-xs text-text-muted font-mono font-bold group-hover:text-text-main">{{ option.percentage }}%</span>
+                                <div class="absolute bottom-0 left-0 top-0 bg-blue-100/50 transition-all duration-500 border-r border-blue-200" :style="{ width: option.percentage + '%'}"></div>
                             </button>
                         </div>
                         <p class="mt-4 text-right text-xs text-text-muted font-medium">248 votes • Ends in 2 days</p>

@@ -45,12 +45,13 @@ class PostController extends Controller
 
             // Base post
             $post = Post::create([
-                'user_id' => $request->user()->id,
+                'user_id' => $request?->user()?->id ?? 1,
                 'type' => $request->type,
                 'title' => $request->title,
                 'content' => $request->type === 'thread'
                     ? $request->content
                     : null,
+                'section_id' => 1
             ]);
 
             // Delegate logic
@@ -60,7 +61,7 @@ class PostController extends Controller
             };
 
             return redirect()
-                ->route('posts.show', $post)
+                ->route('intranet.posts.show', $post)
                 ->with('success', 'Post created successfully.');
         });
     }
@@ -68,9 +69,11 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show()
+    public function show(Post $post)
     {
-        return Inertia::render('Admin/Forum/Show');
+        return Inertia::render('Admin/Forum/Show', [
+            'post' => $post
+        ]);
     }
 
     /**

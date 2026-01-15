@@ -2,7 +2,9 @@
     import { useForm } from '@inertiajs/vue3'
 
     const form = useForm({
-        question: '',
+        type: 'poll',
+        title: '',
+        content: '',
         options: [
             { text: '' },
             { text: '' }
@@ -21,8 +23,12 @@
     }
 
     const submit = () => {
-        form.post(route('posts.store'))
+        form.post(route('intranet.posts.store'))
     }
+    
+    defineExpose({
+        submit
+    })
 </script>
 
 <template>
@@ -30,7 +36,7 @@
         <form class="flex flex-col gap-8">
             <div class="flex flex-col gap-3">
                 <label class="text-slate-900 text-base font-bold leading-normal" for="poll-question">Your Question</label>
-                <textarea class="form-textarea w-full resize-none rounded-lg border border-gray-300 bg-gray-50 text-slate-900 placeholder:text-slate-400 focus:border-primary focus:ring-1 focus:ring-primary min-h-[120px] p-4 text-base transition-colors" id="poll-question" placeholder="e.g., What is the best asset class for Q4 2024?" v-model="form.question"></textarea>
+                <textarea class="form-textarea w-full resize-none rounded-lg border border-gray-300 bg-gray-50 text-slate-900 placeholder:text-slate-400 focus:border-primary focus:ring-1 focus:ring-primary min-h-[120px] p-4 text-base transition-colors" id="poll-question" placeholder="e.g., What is the best asset class for Q4 2024?" v-model="form.title"></textarea>
             </div>
             <div class="flex flex-col gap-4">
                 <label class="text-slate-900 text-base font-bold leading-normal">Answer Options</label>

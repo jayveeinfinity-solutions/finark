@@ -1,5 +1,11 @@
 <script setup>
-
+    const submit = () => {
+        console.log("Creating thread...");
+    }
+    
+    defineExpose({
+        submit
+    })
 </script>
 
 <template>

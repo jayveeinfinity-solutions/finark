@@ -1,7 +1,7 @@
 <script setup>
     import { ref } from 'vue';
     import ForumLayout from '@shared/Layouts/Intranet/Forum.vue';
-    import CreatePost from '@pages/Intranet/Posts/CreatePost.vue';
+    import CreateThread from '@pages/Intranet/Posts/CreateThread.vue';
     import CreatePoll from '@pages/Intranet/Posts/CreatePoll.vue';
 
     defineOptions({
@@ -26,9 +26,9 @@
     <div class="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 lg:py-10">
         <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
             <div class="flex-1 min-w-0">
-                <div class="mb-8" v-show="selectedTab === 'post'">
+                <div class="mb-8" v-show="selectedTab === 'thread'">
                     <h1 class="text-3xl font-extrabold text-slate-900 tracking-tight mb-2">Create New Content</h1>
-                    <p class="text-slate-500 text-base font-normal leading-normal">Share financial insights, market analysis, or gather team feedback.</p>
+                <p class="text-slate-500 text-base font-normal leading-normal">Share financial insights, market analysis, or gather team feedback.</p>
                 </div>
                 <div class="mb-8" v-show="selectedTab === 'poll'">
                     <h1 class="text-3xl font-extrabold text-slate-900 tracking-tight mb-2">Create a Poll</h1>
@@ -37,8 +37,8 @@
                 <div class="bg-white rounded-xl shadow-card border border-slate-200 overflow-hidden">
                     <div class="flex border-b border-slate-200 bg-slate-50/50 px-6">
                         <button class="relative flex items-center gap-2 px-1 py-4 text-sm -mb-px transition-colors"
-                            @click="selectedTab = 'post'"
-                            :class="selectedTab  === 'post'
+                            @click="selectedTab = 'thread'"
+                            :class="selectedTab  === 'thread'
                                 ? 'font-bold text-primary border-b-2 border-primary'
                                 : 'font-medium text-slate-500 hover:text-slate-700 border-b-2 border-transparent hover:border-slate-300'
                             "
@@ -58,7 +58,7 @@
                         </button>
                     </div>
 
-                    <CreatePost v-show="selectedTab === 'post'" ref="threadRef" />
+                    <CreateThread v-show="selectedTab === 'thread'" ref="threadRef" />
                     <CreatePoll v-show="selectedTab === 'poll'" ref="pollRef" />
 
                     <div class="bg-slate-50 px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-200">

@@ -16,22 +16,30 @@ class SectionSeeder extends Seeder
             [
                 'name' => 'Breakfast Club',
                 'slug' => 'breakfast-club',
-                'description' => 'Intention setting and sharing session.'
+                'description' => 'Intention setting and sharing session.',
+                'icon' => null,
+                'order' => 1
             ],
             [
                 'name' => 'Announcements',
                 'slug' => 'announcements',
-                'description' => 'General announcements for all financial advisors.'
+                'description' => 'General announcements for all financial advisors.',
+                'icon' => null,
+                'order' => 2
             ],
             [
                 'name' => 'Seminars & Workshops',
                 'slug' => 'seminars-workshops',
-                'description' => 'Events for Financial Planning, Retirement Planning, Estate Planning, etc.'
+                'description' => 'Events for Financial Planning, Retirement Planning, Estate Planning, etc.',
+                'icon' => null,
+                'order' => 3
             ],
             [
                 'name' => 'Training & Development',
                 'slug' => 'training-development',
-                'description' => 'In-person and virtual training sessions for advisors.'
+                'description' => 'In-person and virtual training sessions for advisors.',
+                'icon' => null,
+                'order' => 4
             ],
         ];
 

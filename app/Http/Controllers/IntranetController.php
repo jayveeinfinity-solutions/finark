@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Inertia\Inertia;
+use App\Models\Forum\Post;
 use Illuminate\Http\Request;
 
 class IntranetController extends Controller
@@ -16,7 +17,35 @@ class IntranetController extends Controller
      */
     public function dashboard()
     {
-        return Inertia::render('Intranet/Dashboard');
+        $latestPoll = Post::where('type', 'poll')
+            ->whereHas('poll.options')
+            ->with('poll.options.votes')
+            ->latest()
+            ->first();
+
+        if($latestPoll?->poll) {
+            $poll = $latestPoll->poll;
+
+            $totalVotes = $poll->options->sum(fn($option) => $option->votes_count);
+
+            $optionsWithPercentage = $poll->options->map(function($option) use ($totalVotes) {
+                $count = $option->votes_count;
+                $percentage = $totalVotes > 0 ? ($count / $totalVotes) * 100 : 0;
+                
+                return [
+                    'id' => $option->id,
+                    'label' => $option->label,
+                    'text' => $option->text,
+                    'votes' => $count,
+                    'percentage' => round($percentage),
+                ];
+            });
+        }
+        
+        return Inertia::render('Intranet/Dashboard', [
+            'poll' => $latestPoll,
+            'options' => $optionsWithPercentage
+        ]);
     }
 
     public function discussions()

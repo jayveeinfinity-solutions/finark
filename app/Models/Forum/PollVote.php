@@ -2,6 +2,7 @@
 
 namespace App\Models\Forum;
 
+use Illuminate\Foundation\Auth\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
@@ -9,7 +10,7 @@ class PollVote extends Model
 {
     protected $fillable = [
         'poll_id',
-        'option_id',
+        'poll_option_id',
         'user_id',
     ];
 

@@ -21,6 +21,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Forum\PostController;
 use App\Http\Controllers\WatchVideoController;
 use App\Http\Controllers\AppointmentController;
+use App\Http\Controllers\Forum\PollVoteController;
 
 // Route::get('/', function () {
 //     return Inertia::render('Welcome', [
@@ -55,7 +56,9 @@ Route::prefix('intranet')
         Route::get('/okr', [IntranetController::class, 'okr'])->name('okr');
         
         Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
-        Route::post('/posts', [PostController::class, 'store'])->name('posts.store');      
+        Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
+        Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show');
+        Route::post('/posts/{poll}/vote', [PollVoteController::class, 'vote'])->name('polls.vote');
 });
 
 Route::name('extranet.')->group(function() {
