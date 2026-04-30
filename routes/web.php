@@ -18,6 +18,7 @@ use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\WatchVideoController;
 use App\Http\Controllers\AppointmentController;
+use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\ExtranetController;
 
 // Route::get('/', function () {
@@ -123,6 +124,7 @@ Route::middleware('auth')->group(function() {
             Route::get('/users/edit/{id}', [UserController::class, 'edit'])->where('id', '[0-9]+');
             Route::get('/users/export/', [UserController::class, 'export']);
             Route::get('/users/profile/{id}', [UserController::class, 'show'])->where('id', '[0-9]+');
+            Route::get('/profile/{id}', [ProfileController::class, 'show'])->where('id', '[0-9]+');
 
             Route::post('/users/store', [UserController::class, 'store']);
             Route::post('/users/update', [UserController::class, 'update']);
