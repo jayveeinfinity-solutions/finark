@@ -48,4 +48,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(WatchVideo::class, 'user_id', 'id');
     }
+
+    public function objectives(): HasMany
+    {
+        return $this->hasMany(Objective::class);
+    }
 }

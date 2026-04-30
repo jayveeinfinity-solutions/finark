@@ -99,9 +99,32 @@ class UserController extends Controller
     {
         Inertia::setRootView($this->layout);
         
-        $user = new UserResource(User::with('roles', 'watchVideos')->findOrFail($id));
+        $userModel = User::with(['roles', 'watchVideos', 'objectives.keyResults'])->findOrFail($id);
+        $user = new UserResource($userModel);
 
-        return Inertia::render('Admin/Users/Show', compact('user'));
+        // OKR Top-level Stats
+        $activeObjectives = $userModel->objectives->where('status', 'active');
+        $okrStats = [
+            'totalObjectives' => $userModel->objectives->count(),
+            'avgProgress' => round($activeObjectives->avg('progress_percentage') ?? 0, 2),
+            'daysLeftInQuarter' => $this->getDaysLeftInQuarter(),
+        ];
+
+        $objectives = $userModel->objectives;
+
+        return Inertia::render('Admin/Users/Show', compact('user', 'objectives', 'okrStats'));
+    }
+
+    private function getDaysLeftInQuarter()
+    {
+        $now = now();
+        $month = $now->month;
+        $year = $now->year;
+
+        $quarterEndMonth = ceil($month / 3) * 3;
+        $quarterEndDate = \Carbon\Carbon::create($year, $quarterEndMonth)->endOfMonth();
+
+        return (int) $now->diffInDays($quarterEndDate);
     }
 
     /**

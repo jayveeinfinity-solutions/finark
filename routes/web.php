@@ -141,6 +141,8 @@ Route::middleware('auth')->group(function() {
             Route::post('/videos/upload/chunks', [VideoController::class, 'uploadChunks']);
             
             Route::get('/clients', [ClientController::class, 'index']);
+            
+            Route::patch('/okrs/key-results/{id}', [\App\Http\Controllers\Admin\OkrController::class, 'updateKeyResult'])->where('id', '[0-9]+');
         // });
     });
 });
