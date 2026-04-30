@@ -23,7 +23,7 @@
                 </div>
                 <ul class="navbar-nav  justify-content-end">
                     <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
-                        <a href="javascript:;" class="p-0 nav-link text-white" id="iconNavbarSidenav">
+                        <a href="javascript:;" class="p-0 nav-link text-white" id="iconNavbarSidenav" @click.prevent="toggleSidebar">
                             <div class="sidenav-toggler-inner">
                                 <i class="bg-white sidenav-toggler-line"></i>
                                 <i class="bg-white sidenav-toggler-line"></i>
@@ -149,4 +149,13 @@
     let pages = url.slice(1).split("/");
     let active = pages[pages.length - 1];
     pages.pop();
+
+    const toggleSidebar = () => {
+        const body = document.body;
+        if (body.classList.contains('g-sidenav-pinned')) {
+            body.classList.remove('g-sidenav-pinned');
+        } else {
+            body.classList.add('g-sidenav-pinned');
+        }
+    };
 </script>

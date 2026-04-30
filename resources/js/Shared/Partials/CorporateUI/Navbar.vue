@@ -21,7 +21,7 @@
                 </div>
                 <ul class="navbar-nav  justify-content-end">
                     <li class="nav-item d-xl-none px-3 d-flex align-items-center">
-                        <a href="javascript:void(0)" class="nav-link text-body p-0" id="iconNavbarSidenav">
+                        <a href="javascript:void(0)" class="nav-link text-body p-0" id="iconNavbarSidenav" @click.prevent="toggleSidebar">
                             <div class="sidenav-toggler-inner">
                             <i class="sidenav-toggler-line"></i>
                             <i class="sidenav-toggler-line"></i>
@@ -128,6 +128,16 @@
         props: {
             page: String,
             pages: Array
+        },
+        methods: {
+            toggleSidebar() {
+                const body = document.body;
+                if (body.classList.contains('g-sidenav-pinned')) {
+                    body.classList.remove('g-sidenav-pinned');
+                } else {
+                    body.classList.add('g-sidenav-pinned');
+                }
+            }
         }
     }
 </script>

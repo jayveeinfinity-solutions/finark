@@ -1,11 +1,11 @@
 <template>
-    <body class="g-sidenav-show bg-gray-100">
+    <div class="g-sidenav-show bg-gray-100">
         <SideBar />
         <main class="main-content position-relative h-100 border-radius-lg bg-white">
             <NavBarAlt :page="page" />
             <slot />
         </main>
-    </body>
+    </div>
 </template>
 
 <script>
@@ -38,7 +38,16 @@
 </script>
 
 <script setup>
+    import { onMounted, onUnmounted } from 'vue';
     import SideBar from '../Partials/CorporateUI/Sidebar.vue';
     import NavBar from '../Partials/CorporateUI/Navbar.vue';
     import NavBarAlt from '../Partials/CorporateUI/NavbarAlt.vue';
+
+    onMounted(() => {
+        document.body.classList.add('g-sidenav-show', 'bg-gray-100');
+    });
+
+    onUnmounted(() => {
+        document.body.classList.remove('g-sidenav-show', 'bg-gray-100', 'g-sidenav-pinned');
+    });
 </script>
