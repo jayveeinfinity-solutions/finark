@@ -3,7 +3,7 @@
         <div class="finark-signin-wrapper">
             <div class="finark-signin-form">
                 <div class="finark-signin-form-header">
-                    <img style="height: 40px;" src="{{ config('r2.endpoint') }}/images/brands/logo-banner.png">
+                    <img style="height: 40px;" :src="$page.props.r2Endpoint + '/images/brands/logo-banner.png'">
                     <div>
                         <h5>Log in to continue</h5>
                     </div>

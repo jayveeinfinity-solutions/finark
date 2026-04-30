@@ -21,7 +21,7 @@
                 <div class="col-lg-4 col-md-12 col-sm-12 mb-7">
                     <div class="d-flex flex-column justify-content-center bg-white h-100">
                         <div>
-                            <img class="w-100" src="storage/images/backgrounds/events-1.jpg">
+                            <img class="w-100" :src="$page.props.r2Endpoint + '/images/backgrounds/events-1.jpg'">
                         </div>
                         <div class="d-flex flex-column p-4" style="gap: 1rem;">
                             <span class="fa-2024-events-card-date">December 1, 2023</span>
@@ -41,7 +41,7 @@
                 <div class="col-lg-4 col-md-12 col-sm-12 mb-7">
                     <div class="d-flex flex-column justify-content-center bg-white h-100">
                         <div>
-                            <img class="w-100" src="storage/images/backgrounds/events-2.jpg">
+                            <img class="w-100" :src="$page.props.r2Endpoint + '/images/backgrounds/events-2.jpg'">
                         </div>
                         <div class="d-flex flex-column p-4" style="gap: 1rem;">
                             <span class="fa-2024-events-card-date">January 15, 2024</span>

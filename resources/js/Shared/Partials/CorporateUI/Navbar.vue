@@ -48,7 +48,7 @@
                                 <a class="dropdown-item border-radius-md" href="javascript:;">
                                     <div class="d-flex py-1">
                                     <div class="my-auto">
-                                        <img src="{{ config('r2.endpoint') }}/images/brands/logo.png" class="avatar avatar-sm border-radius-sm  me-3 ">
+                                        <img :src="$page.props.r2Endpoint + '/images/brands/logo.png'" class="avatar avatar-sm border-radius-sm  me-3 ">
                                     </div>
                                     <div class="d-flex flex-column justify-content-center">
                                         <h6 class="text-sm font-weight-normal mb-1">
@@ -66,7 +66,7 @@
                                 <a class="dropdown-item border-radius-md" href="javascript:;">
                                     <div class="d-flex py-1">
                                     <div class="my-auto">
-                                        <img src="{{ config('r2.endpoint') }}/images/brands/logo.png" class="avatar avatar-sm border-radius-sm bg-gradient-dark p-2  me-3 ">
+                                        <img :src="$page.props.r2Endpoint + '/images/brands/logo.png'" class="avatar avatar-sm border-radius-sm bg-gradient-dark p-2  me-3 ">
                                     </div>
                                     <div class="d-flex flex-column justify-content-center">
                                         <h6 class="text-sm font-weight-normal mb-1">
@@ -114,7 +114,7 @@
                     </li>
                     <li class="nav-item ps-2 d-flex align-items-center">
                         <a :href="'/admin/users/edit/' + $page.props.auth.user.id" class="nav-link text-body p-0">
-                            <img src="{{ config('r2.endpoint') }}/images/brands/logo.png" class="avatar avatar-sm" alt="avatar" />
+                            <img :src="$page.props.r2Endpoint + '/images/brands/logo.png'" class="avatar avatar-sm" alt="avatar" />
                         </a>
                     </li>
                 </ul>

@@ -11,10 +11,10 @@ return [
     |
     */
 
-    'key'       => env('CF_R2_KEY'),
-    'secret'    => env('CF_R2_SECRET'),
-    'bucket'    => env('CF_R2_BUCKET'),
-    'url'       => env('CF_R2_ENDPOINT'),
+    'key'       => env('R2_ACCESS_KEY_ID'),
+    'secret'    => env('R2_SECRET_ACCESS_KEY'),
+    'bucket'    => env('R2_BUCKET_NAME'),
+    'url'       => env('R2_ENDPOINT'),
 
     /*
     |--------------------------------------------------------------------------

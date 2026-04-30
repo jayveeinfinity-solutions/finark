@@ -120,7 +120,7 @@
                             </div>
                             <div class="col-xl-4 col-md-6 mb-xl-4 mb-4" v-for="course in courses.data" :key="course.id">
                                 <div class="mb-4 card card-background card-background-after-none align-items-start">
-                                    <div class="bg-cover full-background" :style="{ 'background-image': 'url(/storage/courses/posters/' + course.poster + ')'}"></div>
+                                    <div class="bg-cover full-background" :style="{ 'background-image': 'url(' + $page.props.r2Endpoint + '/courses/posters/' + course.poster + ')'}"></div>
                                     <span class="mask bg-dark opacity-1 border-radius-lg"></span>
                                     <div class="p-3 card-body text-start w-100">
                                         <div class="row">

@@ -28,7 +28,7 @@
             </p>
         </div>
         <div class="col-lg-6 col-md-12 col-sm-12">
-            <img class="w-100" src="/storage/images/services/4.png">
+            <img class="w-100" :src="$page.props.r2Endpoint + '/images/services/4.png'">
         </div>
     </div> -->
 </template>

@@ -5,7 +5,7 @@
             <div class="row justify-content-xl-between justify-content-center">
                 <div class="col-xl-4 col-12">
                     <a href="./">
-                        <img class="w-100" src="{{ config('r2.endpoint') }}/images/brands/logo-banner-gray.png">
+                        <img class="w-100" :src="$page.props.r2Endpoint + '/images/brands/logo-banner-gray.png'">
                     </a>
                 </div>
                 <div class="fa-2024-footer col-xl-8 col-12 pt-md-0 pt-5 ps-5">
@@ -16,19 +16,19 @@
                     <!-- <h2 class="finark-font-bold finark-text-primary text-uppercase text-center">Keep in touch</h2>
                     <div class="d-flex align-items-center justify-content-center">
                         <a class="mx-3" href="https://www.linkedin.com/company/finarkgroup/" target="_blank">
-                            <img class="w-100 finark-footer-icons" src="/storage/images/icons/linkedin.png">
+                            <img class="w-100 finark-footer-icons" :src="$page.props.r2Endpoint + '/images/icons/linkedin.png'">
                         </a>
                         <a class="mx-3" href="https://www.instagram.com/finark.advisory/" target="_blank">
-                            <img class="w-100 finark-footer-icons" src="/storage/images/icons/instagram.png">
+                            <img class="w-100 finark-footer-icons" :src="$page.props.r2Endpoint + '/images/icons/instagram.png'">
                         </a>
                         <a class="mx-3" href="https://www.facebook.com/FinancialArk" target="_blank">
-                            <img class="w-100 finark-footer-icons" src="/storage/images/icons/facebook.png">
+                            <img class="w-100 finark-footer-icons" :src="$page.props.r2Endpoint + '/images/icons/facebook.png'">
                         </a>
                         <a class="mx-3" href="https://wa.me/6591813260" target="_blank">
-                            <img class="w-100 finark-footer-icons" src="/storage/images/icons/whatsapp.png">
+                            <img class="w-100 finark-footer-icons" :src="$page.props.r2Endpoint + '/images/icons/whatsapp.png'">
                         </a>
                         <a class="mx-3" href="https://www.youtube.com/@FinancialArk" target="_blank">
-                            <img class="w-100 finark-footer-icons" src="/storage/images/icons/youtube.png">
+                            <img class="w-100 finark-footer-icons" :src="$page.props.r2Endpoint + '/images/icons/youtube.png'">
                         </a>
                     </div> -->
                 </div>

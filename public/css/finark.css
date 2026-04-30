@@ -2,7 +2,7 @@ html {
     font-family: 'Open Sans', sans-serif;
 }
 .bg-landing-image {
-    background-image: url('../../storage/images/backgrounds/landing-image.jpeg');
+    background-image: url('https://pub-3d8d6e9cda654fde9345d0ede4784dc7.r2.dev/images/backgrounds/landing-image.jpeg');
     background-attachment: scroll;
     background-position: center 100%;
     -webkit-background-size: cover;
@@ -11,7 +11,7 @@ html {
     background-size: cover;
 }
 .bg-landing-image-2 {
-    background-image: url('../../storage/images/backgrounds/landing-image-2.jpeg');
+    background-image: url('https://pub-3d8d6e9cda654fde9345d0ede4784dc7.r2.dev/images/backgrounds/landing-image-2.jpeg');
     background-attachment: scroll;
     background-position: center 100%;
     -webkit-background-size: cover;
@@ -21,7 +21,7 @@ html {
 }
 .bg-landing-image-3 {
     background-color: #fff;
-    background-image: url('../../storage/images/backgrounds/landing-image-3.jpeg');
+    background-image: url('https://pub-3d8d6e9cda654fde9345d0ede4784dc7.r2.dev/images/backgrounds/landing-image-3.jpeg');
     background-attachment: scroll;
     background-position: center 100%;
     -webkit-background-size: cover;
@@ -31,7 +31,7 @@ html {
 }
 .bg-landing-image-4 {
     background-color: #fff;
-    background-image: url('../../storage/images/backgrounds/landing-image-4.jpg');
+    background-image: url('https://pub-3d8d6e9cda654fde9345d0ede4784dc7.r2.dev/images/backgrounds/landing-image-4.jpg');
     background-attachment: scroll;
     background-position: center 100%;
     -webkit-background-size: cover;
@@ -41,7 +41,7 @@ html {
 }
 .bg-landing-image-5 {
     background-color: #fff;
-    background-image: url('../../storage/images/backgrounds/landing-image-5.png');
+    background-image: url('https://pub-3d8d6e9cda654fde9345d0ede4784dc7.r2.dev/images/backgrounds/landing-image-5.png');
     background-attachment: scroll;
     background-position: center 100%;
     -webkit-background-size: cover;
@@ -51,7 +51,7 @@ html {
 }
 .bg-landing-image-6 {
     background-color: #fff;
-    background-image: url('../../storage/images/backgrounds/landing-image-6.jpg');
+    background-image: url('https://pub-3d8d6e9cda654fde9345d0ede4784dc7.r2.dev/images/backgrounds/landing-image-6.jpg');
     background-attachment: scroll;
     background-position: center;
     -webkit-background-size: cover;
@@ -61,7 +61,7 @@ html {
 }
 .bg-landing-image-7 {
     background-color: #fff;
-    background-image: url('../../storage/images/backgrounds/landing-image-7.jpg');
+    background-image: url('https://pub-3d8d6e9cda654fde9345d0ede4784dc7.r2.dev/images/backgrounds/landing-image-7.jpg');
     background-attachment: scroll;
     background-position: center;
     -webkit-background-size: cover;
@@ -71,7 +71,7 @@ html {
 }
 .bg-landing-image-8 {
     background-color: #fff;
-    background-image: url('../../storage/images/backgrounds/landing-image-8.jpg');
+    background-image: url('https://pub-3d8d6e9cda654fde9345d0ede4784dc7.r2.dev/images/backgrounds/landing-image-8.jpg');
     background-attachment: scroll;
     background-position: center;
     -webkit-background-size: cover;
@@ -81,7 +81,7 @@ html {
 }
 .bg-landing-image-9 {
     background-color: #fff;
-    background-image: url('../../storage/images/backgrounds/landing-image-9.jpg');
+    background-image: url('https://pub-3d8d6e9cda654fde9345d0ede4784dc7.r2.dev/images/backgrounds/landing-image-9.jpg');
     background-attachment: scroll;
     background-position: center;
     -webkit-background-size: cover;
@@ -91,7 +91,7 @@ html {
 }
 .fa-2024-bg-landing-image {
     background-color: #fff;
-    background-image: url('../../storage/images/backgrounds/landing-image-2024.png');
+    background-image: url('https://pub-3d8d6e9cda654fde9345d0ede4784dc7.r2.dev/images/backgrounds/landing-image-2024.png');
     background-attachment: scroll;
     background-position: top;
     -webkit-background-size: cover;
@@ -102,7 +102,7 @@ html {
 .fa-2024-bg-landing-image-2 {
     height: 500px;
     background-color: #fff;
-    background-image: url('../../storage/images/backgrounds/landing-image-2-2024.png');
+    background-image: url('https://pub-3d8d6e9cda654fde9345d0ede4784dc7.r2.dev/images/backgrounds/landing-image-2-2024.png');
     background-attachment: scroll;
     background-position: top;
     -webkit-background-size: cover;
@@ -112,7 +112,7 @@ html {
 }
 .fa-2024-bg-landing-partners {
     background-color: #fff;
-    background-image: url('../../storage/images/backgrounds/partners-2024.jpeg');
+    background-image: url('https://pub-3d8d6e9cda654fde9345d0ede4784dc7.r2.dev/images/backgrounds/partners-2024.jpeg');
     background-attachment: scroll;
     background-position: top;
     -webkit-background-size: cover;
@@ -122,7 +122,7 @@ html {
 }
 .fa-2024-bg-landing-quote {
     background-color: #fff;
-    background-image: url('../../storage/images/backgrounds/quote-bg.png');
+    background-image: url('https://pub-3d8d6e9cda654fde9345d0ede4784dc7.r2.dev/images/backgrounds/quote-bg.png');
     background-attachment: scroll;
     background-position: top;
     -webkit-background-size: cover;
@@ -132,7 +132,7 @@ html {
 }
 .fa-2024-bg-footer {
     background-color: #fff;
-    background-image: url('../../storage/images/backgrounds/footer.png');
+    background-image: url('https://pub-3d8d6e9cda654fde9345d0ede4784dc7.r2.dev/images/backgrounds/footer.png');
     background-attachment: scroll;
     background-position: top;
     -webkit-background-size: cover;
@@ -143,7 +143,7 @@ html {
 /* ABOUT PAGE 2024 */
 .fa-2024-bg-aboutus {
     /* background-color: #fff; */
-    background-image: url('../../storage/images/backgrounds/about-image-2-2024.png');
+    background-image: url('https://pub-3d8d6e9cda654fde9345d0ede4784dc7.r2.dev/images/backgrounds/about-image-2-2024.png');
     background-attachment: scroll;
     background-position: top;
     -webkit-background-size: cover;
@@ -153,7 +153,7 @@ html {
 }
 .fa-2024-bg-wawlf {
     background-color: #fff;
-    background-image: url('../../storage/images/backgrounds/Who-are-we-looking-for.png');
+    background-image: url('https://pub-3d8d6e9cda654fde9345d0ede4784dc7.r2.dev/images/backgrounds/Who-are-we-looking-for.png');
     background-attachment: scroll;
     background-position: top;
     -webkit-background-size: cover;
@@ -163,80 +163,80 @@ html {
 }
 /* SERVICES PAGE 2024 */
 .fa-2024-bg-s1 {
-    background: url('../../storage/images/backgrounds/services/financial-planning-adults.png'), #ffffff;
+    background: url('https://pub-3d8d6e9cda654fde9345d0ede4784dc7.r2.dev/images/backgrounds/services/financial-planning-adults.png'), #ffffff;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .fa-2024-bg-s2 {
-    background: url('../../storage/images/backgrounds/services/financial-planning-children.png'), #ffffff;
+    background: url('https://pub-3d8d6e9cda654fde9345d0ede4784dc7.r2.dev/images/backgrounds/services/financial-planning-children.png'), #ffffff;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .fa-2024-bg-s3 {
-    background: url('../../storage/images/backgrounds/services/insurance-portfolio-review.png'), #ffffff;
+    background: url('https://pub-3d8d6e9cda654fde9345d0ede4784dc7.r2.dev/images/backgrounds/services/insurance-portfolio-review.png'), #ffffff;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .fa-2024-bg-s4 {
-    background: url('../../storage/images/backgrounds/services/savings-and-investments-plan.png'), #ffffff;
+    background: url('https://pub-3d8d6e9cda654fde9345d0ede4784dc7.r2.dev/images/backgrounds/services/savings-and-investments-plan.png'), #ffffff;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .fa-2024-bg-s5 {
-    background: url('../../storage/images/backgrounds/services/retirement-planning.png'), #ffffff;
+    background: url('https://pub-3d8d6e9cda654fde9345d0ede4784dc7.r2.dev/images/backgrounds/services/retirement-planning.png'), #ffffff;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .fa-2024-bg-s6 {
-    background: url('../../storage/images/backgrounds/services/loan-advisory.png'), #ffffff;
+    background: url('https://pub-3d8d6e9cda654fde9345d0ede4784dc7.r2.dev/images/backgrounds/services/loan-advisory.png'), #ffffff;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .fa-2024-bg-s7 {
-    background: url('../../storage/images/backgrounds/services/investment-advisory.png'), #ffffff;
+    background: url('https://pub-3d8d6e9cda654fde9345d0ede4784dc7.r2.dev/images/backgrounds/services/investment-advisory.png'), #ffffff;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .fa-2024-bg-s8 {
-    background: url('../../storage/images/backgrounds/services/general-insurance.png'), #ffffff;
+    background: url('https://pub-3d8d6e9cda654fde9345d0ede4784dc7.r2.dev/images/backgrounds/services/general-insurance.png'), #ffffff;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .fa-2024-bg-s9 {
-    background: url('../../storage/images/backgrounds/services/estate-planning.png'), #ffffff;
+    background: url('https://pub-3d8d6e9cda654fde9345d0ede4784dc7.r2.dev/images/backgrounds/services/estate-planning.png'), #ffffff;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .fa-2024-bg-s10 {
-    background: url('../../storage/images/backgrounds/services/business-continuity.png'), #ffffff;
+    background: url('https://pub-3d8d6e9cda654fde9345d0ede4784dc7.r2.dev/images/backgrounds/services/business-continuity.png'), #ffffff;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .fa-2024-bg-aul {
-    background: url('../../storage/images/backgrounds/aboutus-modal.png'), #1B3768;
+    background: url('https://pub-3d8d6e9cda654fde9345d0ede4784dc7.r2.dev/images/backgrounds/aboutus-modal.png'), #1B3768;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .fa-2024-bg-events {
-    background: url('../../storage/images/backgrounds/events-bg.png'), #1B3768;
+    background: url('https://pub-3d8d6e9cda654fde9345d0ede4784dc7.r2.dev/images/backgrounds/events-bg.png'), #1B3768;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .fa-2024-bg-events-quote {
     background-color: #fff;
-    background-image: url('../../storage/images/backgrounds/quote-bg-light.png');
+    background-image: url('https://pub-3d8d6e9cda654fde9345d0ede4784dc7.r2.dev/images/backgrounds/quote-bg-light.png');
     background-attachment: scroll;
     background-position: top;
     -webkit-background-size: cover;
@@ -319,7 +319,7 @@ html {
 /* For signin page */
 .bg-landing-image-10 {
     background-color: rgb(250, 251, 252);
-    background-image: url('../../storage/images/backgrounds/landing-image-7.jpg');
+    background-image: url('https://pub-3d8d6e9cda654fde9345d0ede4784dc7.r2.dev/images/backgrounds/landing-image-7.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;

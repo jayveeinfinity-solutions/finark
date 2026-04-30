@@ -12,7 +12,7 @@
                 <div class="row no-gutters">
                     <div class="col-lg-3 col-md-4 col-sm-6" v-for="partner in partners" :key="partner.id" :class="active_group == -1 || partner.groups.includes(active_group) ? '' : 'd-none'">
                         <div class="card pt-4 px-3 d-flex mh-100 flex-column justify-content-center">
-                            <img class="align-self-center" style="width: 70%;" :src="'/storage/images/uploads/' + partner.logo" v-if="partner.logo">
+                            <img class="align-self-center" style="width: 70%;" :src="$page.props.r2Endpoint + '/images/uploads/' + partner.logo" v-if="partner.logo">
                             <h4 class="py-3 text-center" :class="!partner.logo ? 'fs-3' : ''">{{ partner.name }}</h4>
                         </div>
                     </div>

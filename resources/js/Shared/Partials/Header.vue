@@ -22,7 +22,7 @@
     <nav class="navbar navbar-top navbar-horizontal navbar-expand-lg navbar-dark mt-lg-3 mt-md-0">
         <div class="container-xxl container-xl container-lg container-md container-sm">
             <a href="/">
-                <img src="{{ config('r2.endpoint') }}/images/brands/logo-banner.png" style="height: 5.125rem;">
+                <img :src="$page.props.r2Endpoint + '/images/brands/logo-banner.png'" style="height: 5.125rem;">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse-main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <FontAwesomeIcon icon="fa-solid fa-bars" class="finark-text-primary" style="font-size: 3rem !important;" />
@@ -33,7 +33,7 @@
                     <div class="row">
                         <div class="col-6 collapse-brand">
                             <a href="/">
-                                <img src="{{ config('r2.endpoint') }}/images/brands/logo-banner.png">
+                                <img :src="$page.props.r2Endpoint + '/images/brands/logo-banner.png'">
                             </a>
                         </div>
                         <div class="col-6 collapse-close">

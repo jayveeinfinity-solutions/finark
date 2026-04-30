@@ -7,13 +7,13 @@
         <!-- Social media meta tags -->
         <meta head-key="social-title" property="og:title" content="FinArk &sdot; Transforming the way financial advisory is done">
         <meta head-key="social-description" property="og:description" content="We provide quality financial advice and competitive financial products and solutions our clients - serving in our clients' needs.">
-        <meta head-key="social-image" property="og:image" content="http://fin-ark.com/storage/images/backgrounds/landing-image.jpeg">
+        <meta head-key="social-image" property="og:image" :content="$page.props.r2Endpoint + '/images/backgrounds/landing-image.jpeg'">
         <meta head-key="social-url" property="og:url" content="http://fin-ark.com/">
         <meta head-key="social-type" property="og:type" content="website">
         <!-- Twitter meta tags -->
         <meta head-key="twitter-title" property="twitter:title" content="FinArk &sdot; Transforming the way financial advisory is done">
         <meta head-key="twitter-description" property="twitter:description" content="We provide quality financial advice and competitive financial products and solutions our clients - serving in our clients' needs.">
-        <meta head-key="twitter-image" property="twitter:image" content="http://fin-ark.com/storage/images/backgrounds/landing-image.jpeg">
+        <meta head-key="twitter-image" property="twitter:image" :content="$page.props.r2Endpoint + '/images/backgrounds/landing-image.jpeg'">
         <meta content="summary_large_image" name="twitter:card">
     </Head>
     <body class="finark-bg-default">

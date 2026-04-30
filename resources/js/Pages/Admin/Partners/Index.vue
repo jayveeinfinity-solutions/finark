@@ -81,7 +81,7 @@
                     <td>
                       <div class="d-flex px-2 py-1">
                         <div class="d-flex align-items-center">
-                          <img :src="'/storage/images/uploads/' + partner.logo" class="avatar-sm rounded-circle me-2" alt="user1" style="object-fit: contain;" v-show="partner.logo">
+                          <img :src="$page.props.r2Endpoint + '/images/uploads/' + partner.logo" class="avatar-sm rounded-circle me-2" alt="user1" style="object-fit: contain;" v-show="partner.logo">
                         </div>
                         <div class="d-flex flex-column justify-content-center ms-1">
                           <h6 class="mb-0 text-sm font-weight-semibold">{{ partner.name }}</h6>

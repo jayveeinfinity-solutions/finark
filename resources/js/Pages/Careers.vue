@@ -35,9 +35,9 @@ line-height: normal;">Join us in the world of financial services!</h1>
         <div class="row">
             <div class="col-12">
                 <div class="d-flex flex-column py-6">
-                    <div class="row d-flex flex-row" style="background-image: url('storage/images/backgrounds/Group 28.png');">
+                    <div class="row d-flex flex-row" :style="{ 'background-image': 'url(' + $page.props.r2Endpoint + '/images/backgrounds/Group 28.png)' }">
                         <div class="col-3 d-lg-block d-none p-0">
-                            <img class="w-100" src="storage/images/backgrounds/unsplash_Lks7vei-eAg.png">
+                            <img class="w-100" :src="$page.props.r2Endpoint + '/images/backgrounds/unsplash_Lks7vei-eAg.png'">
                         </div>
                         <div class="col-lg-9 col-md-12 col-sm-12 p-0 py-lg-0 py-5 d-flex align-items-center">
                             <h3 class="w-100 text-center align-self-center" style="color: var(--White, #F6F6FA);
@@ -85,9 +85,9 @@ line-height: normal;">Join us in the world of financial services!</h1>
             </div>
             <div class="col-12">
                 <div class="d-flex flex-column py-6">
-                    <div class="d-flex flex-row" style="background-image: url('storage/images/backgrounds/Group 28.png');">
+                    <div class="d-flex flex-row" :style="{ 'background-image': 'url(' + $page.props.r2Endpoint + '/images/backgrounds/Group 28.png)' }">
                         <div class="col-3 d-lg-block d-none p-0">
-                            <img class="w-100" src="storage/images/backgrounds/unsplash_Lks7vei-eAg.png">
+                            <img class="w-100" :src="$page.props.r2Endpoint + '/images/backgrounds/unsplash_Lks7vei-eAg.png'">
                         </div>
                         <div class="col-lg-9 col-md-12 col-sm-12 p-0 py-lg-0 py-5 d-flex align-items-center">
                             <h3 class="w-100 text-center align-self-center" style="color: var(--White, #F6F6FA);
@@ -131,25 +131,25 @@ line-height: normal;">Join us in the world of financial services!</h1>
                 </div>
             </div>
             <!-- <div class="col-4 mb-4">
-                <img class="finark-careers w-100 shadow-lg" src="/storage/images/careers/1.jpg">
+                <img class="finark-careers w-100 shadow-lg" :src="$page.props.r2Endpoint + '/images/careers/1.jpg'">
             </div>
             <div class="col-4 mb-4">
-                <img class="finark-careers w-100 shadow-lg" src="/storage/images/careers/2.jpg">
+                <img class="finark-careers w-100 shadow-lg" :src="$page.props.r2Endpoint + '/images/careers/2.jpg'">
             </div>
             <div class="col-4 mb-4">
-                <img class="finark-careers w-100 shadow-lg" src="/storage/images/careers/3.jpg">
+                <img class="finark-careers w-100 shadow-lg" :src="$page.props.r2Endpoint + '/images/careers/3.jpg'">
             </div>
             <div class="col-4 mb-4">
-                <img class="finark-careers w-100 shadow-lg" src="/storage/images/careers/4.jpg">
+                <img class="finark-careers w-100 shadow-lg" :src="$page.props.r2Endpoint + '/images/careers/4.jpg'">
             </div>
             <div class="col-4 mb-4">
-                <img class="finark-careers w-100 shadow-lg" src="/storage/images/careers/5.jpg">
+                <img class="finark-careers w-100 shadow-lg" :src="$page.props.r2Endpoint + '/images/careers/5.jpg'">
             </div>
             <div class="col-4 mb-4">
-                <img class="finark-careers w-100 shadow-lg" src="/storage/images/careers/6.jpg">
+                <img class="finark-careers w-100 shadow-lg" :src="$page.props.r2Endpoint + '/images/careers/6.jpg'">
             </div>
             <div class="col-4 mb-4">
-                <img class="finark-careers w-100 shadow-lg" src="/storage/images/careers/7.jpg">
+                <img class="finark-careers w-100 shadow-lg" :src="$page.props.r2Endpoint + '/images/careers/7.jpg'">
             </div> -->
             <!-- <div class="col-lg-12 mb-3">
                 <div class="card shadow rounded d-flex flex-row">
@@ -221,7 +221,7 @@ line-height: normal;">Join us in the world of financial services!</h1>
                         </div>
                         <div class="d-flex flex-column finark-bg-primary pt-4 px-4 pb-3">
                             <div class="mb-3 d-flex justify-content-center">
-                                <img src="{{ config('r2.endpoint') }}/images/brands/logo-banner-white.png" height="48">
+                                <img :src="$page.props.r2Endpoint + '/images/brands/logo-banner-white.png'" height="48">
                             </div>
                             <h2 class="fw-bold text-white text-center">Please fill up the following fields</h2>
                         </div>

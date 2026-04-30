@@ -32,10 +32,10 @@
                 controls
                 crossorigin
                 playsinline
-                data-poster="/storage/images/default_poster.png"
+                :data-poster="$page.props.r2Endpoint + '/images/default_poster.png'"
             >
                 <source
-                :src="'/storage/videos/course-' + video.data.course_id + '/' + video.data.filename"
+                :src="$page.props.r2Endpoint + '/videos/course-' + video.data.course_id + '/' + video.data.filename"
                 type="video/mp4"
                 />
             </video>

@@ -9,7 +9,7 @@
                 </div>
                 <div class="d-flex flex-column finark-bg-primary pt-4 px-4 pb-3">
                     <div class="mb-3 d-flex justify-content-center">
-                        <img src="{{ config('r2.endpoint') }}/images/brands/logo-banner-white.png" height="48">
+                        <img :src="$page.props.r2Endpoint + '/images/brands/logo-banner-white.png'" height="48">
                     </div>
                     <h2 class="fw-bold text-white text-center">Schedule an appointment?</h2>
                 </div>

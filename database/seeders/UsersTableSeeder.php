@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -165,7 +166,21 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => '2023-08-27 06:45:14',
             ),
         ));
-        
-        
+
+        // Assign Roles
+        $jayvee = User::find(1);
+        if ($jayvee) {
+            $jayvee->syncRoles(['developer']);
+        }
+
+        $admin = User::find(11);
+        if ($admin) {
+            $admin->syncRoles(['admin']);
+        }
+
+        // Assign 'consultant' role to all other users
+        User::whereNotIn('id', [1, 11])->get()->each(function ($user) {
+            $user->syncRoles(['consultant']);
+        });
     }
 }

@@ -29,7 +29,7 @@ line-height: normal;">
         </div>
     </div>
     <!-- <div class="container-xxl container-xl container-lg container-md container-sm pt-5 pb-5">
-        <div style="background: url('storage/images/backgrounds/unsplash_VBLHICVh-lI.png'), lightgray 3.064px -359.344px / 100% 176.889% no-repeat;">
+        <div :style="{ background: 'url(' + $page.props.r2Endpoint + '/images/backgrounds/unsplash_VBLHICVh-lI.png'), lightgray 3.064px -359.344px / 100% 176.889% no-repeat' }">
             <div style="background: linear-gradient(270deg, #D9D9D9 0.21%, #172A55 0.22%, rgba(25, 52, 98, 0.00) 61.72%);">
                 <div class="d-flex flex-row-reverse">
                     <div class="py-8 px-9">
@@ -78,7 +78,7 @@ line-height: normal;">
             <!-- <div class="col-lg-4 col-12 mb-5">
                 <div class="d-flex flex-column justify-content-center bg-white h-100">
                     <div>
-                        <img class="w-100" src="storage/images/backgrounds/events-1.jpg">
+                        <img class="w-100" :src="$page.props.r2Endpoint + '/images/backgrounds/events-1.jpg'">
                     </div>
                     <div class="d-flex flex-column p-4 border-top-0" style="gap: 1rem; border: 2.223px solid var(--Grey, #A4ADCA);">
                         <div style="margin-top: -2.4rem !important">
@@ -97,7 +97,7 @@ line-height: normal;">
             <div class="col-lg-4 col-12 mb-5">
                 <div class="d-flex flex-column justify-content-center bg-white h-100">
                     <div>
-                        <img class="w-100" src="storage/images/backgrounds/events-1.jpg">
+                        <img class="w-100" :src="$page.props.r2Endpoint + '/images/backgrounds/events-1.jpg'">
                     </div>
                     <div class="d-flex flex-column p-4 border-top-0" style="gap: 1rem; border: 2.223px solid var(--Grey, #A4ADCA);">
                         <div style="margin-top: -2.4rem !important">
@@ -116,7 +116,7 @@ line-height: normal;">
             <div class="col-lg-4 col-12 mb-5">
                 <div class="d-flex flex-column justify-content-center bg-white h-100">
                     <div>
-                        <img class="w-100" src="storage/images/backgrounds/events-1.jpg">
+                        <img class="w-100" :src="$page.props.r2Endpoint + '/images/backgrounds/events-1.jpg'">
                     </div>
                     <div class="d-flex flex-column p-4 border-top-0" style="gap: 1rem; border: 2.223px solid var(--Grey, #A4ADCA);">
                         <div style="margin-top: -2.4rem !important">
@@ -135,7 +135,7 @@ line-height: normal;">
             <div class="col-lg-4 col-12 mb-5">
                 <div class="d-flex flex-column justify-content-center bg-white h-100">
                     <div>
-                        <img class="w-100" src="storage/images/backgrounds/events-1.jpg">
+                        <img class="w-100" :src="$page.props.r2Endpoint + '/images/backgrounds/events-1.jpg'">
                     </div>
                     <div class="d-flex flex-column p-4 border-top-0" style="gap: 1rem; border: 2.223px solid var(--Grey, #A4ADCA);">
                         <div style="margin-top: -2.4rem !important">
@@ -154,7 +154,7 @@ line-height: normal;">
             <div class="col-lg-4 col-12 mb-5">
                 <div class="d-flex flex-column justify-content-center bg-white h-100">
                     <div>
-                        <img class="w-100" src="storage/images/backgrounds/events-1.jpg">
+                        <img class="w-100" :src="$page.props.r2Endpoint + '/images/backgrounds/events-1.jpg'">
                     </div>
                     <div class="d-flex flex-column p-4 border-top-0" style="gap: 1rem; border: 2.223px solid var(--Grey, #A4ADCA);">
                         <div style="margin-top: -2.4rem !important">
@@ -173,7 +173,7 @@ line-height: normal;">
             <div class="col-lg-4 col-12 mb-5">
                 <div class="d-flex flex-column justify-content-center bg-white h-100">
                     <div>
-                        <img class="w-100" src="storage/images/backgrounds/events-1.jpg">
+                        <img class="w-100" :src="$page.props.r2Endpoint + '/images/backgrounds/events-1.jpg'">
                     </div>
                     <div class="d-flex flex-column p-4 border-top-0" style="gap: 1rem; border: 2.223px solid var(--Grey, #A4ADCA);">
                         <div style="margin-top: -2.4rem !important">

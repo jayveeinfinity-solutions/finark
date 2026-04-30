@@ -43,7 +43,7 @@
                 <div class="row d-flex">
                     <div class="col-lg-4 mr-auto text-left px-5 mt-4">
                         <div class="card rounded shadow-none border-0 h-100">
-                            <img src="/storage/images/misc/approach-1.png" class="card-img-top">
+                            <img :src="$page.props.r2Endpoint + '/images/misc/approach-1.png'" class="card-img-top">
                             <blockquote class="card-blockquote p-0 mt-4 finark-landing-our-approach-blockquote">
                                 <h4 class="text-uppercase text-center py-4 px-0 mb-0">Support</h4>
                                 <p class="text-dark fs-5 font-weight-400 text-justify">Our systems & processes are curated by our financial consultants to support them in running their financial advisory practive.
@@ -53,7 +53,7 @@
                     </div>
                     <div class="col-lg-4 mr-auto text-left px-5 mt-4">
                         <div class="card rounded shadow-none border-0 h-100">
-                            <img src="/storage/images/misc/approach-2.png" class="card-img-top">
+                            <img :src="$page.props.r2Endpoint + '/images/misc/approach-2.png'" class="card-img-top">
                             <blockquote class="card-blockquote p-0 mt-4 finark-landing-our-approach-blockquote">
                                 <h4 class="text-uppercase text-center py-4 px-0 mb-0">People</h4>
                                 <p class="text-dark fs-5 font-weight-400 text-justify">A safe workplace where financial consultants are focused on building their financial advisory practices towards their definition of success.
@@ -63,7 +63,7 @@
                     </div>
                     <div class="col-lg-4 mr-auto text-left px-5 mt-4">
                         <div class="card rounded shadow-none border-0 h-100">
-                            <img src="/storage/images/misc/approach-3.png" class="card-img-top">
+                            <img :src="$page.props.r2Endpoint + '/images/misc/approach-3.png'" class="card-img-top">
                             <blockquote class="card-blockquote p-0 mt-4 finark-landing-our-approach-blockquote">
                                 <h4 class="text-uppercase text-center py-4 px-0 mb-0">Environment</h4>
                                 <p class="text-dark fs-5 font-weight-400 text-justify">We coach and guide practitioners to support them in their work, and also in their personal lives.
@@ -82,21 +82,21 @@
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item rounded-5 overflow-hidden">
-                            <img src="/storage/images/misc/designing.jpeg" class="d-block w-100" alt="Slide 1">
+                            <img :src="$page.props.r2Endpoint + '/images/misc/designing.jpeg'" class="d-block w-100" alt="Slide 1">
                             <div class="carousel-caption rounded">
                                 <h4 class="text-white text-uppercase">Well-Curated Support Infrastracture</h4>
                                 <p class="text-muted font-weight-400">Our systems & processes are curated by our financial consultants to support them in running their financial advisory practive.</p>
                             </div>
                         </div>
                         <div class="carousel-item rounded-5 overflow-hidden active">
-                            <img src="/storage/images/misc/handshake.jpeg" class="d-block w-100" alt="Slide 2">
+                            <img :src="$page.props.r2Endpoint + '/images/misc/handshake.jpeg'" class="d-block w-100" alt="Slide 2">
                             <div class="carousel-caption rounded">
                                 <h4 class="text-white text-uppercase">Respectful & Collaborative Work Environment</h4>
                                 <p class="text-muted font-weight-400">We contribute our strengths and leverage on others’ strengths to cover our weakness</p>
                             </div>
                         </div>
                         <div class="carousel-item rounded-5 overflow-hidden">
-                            <img src="/storage/images/misc/competition.jpeg" class="d-block w-100" alt="Slide 3">
+                            <img :src="$page.props.r2Endpoint + '/images/misc/competition.jpeg'" class="d-block w-100" alt="Slide 3">
                             <div class="carousel-caption rounded">
                                 <h4 class="text-white text-uppercase">We Care for Our People</h4>
                                 <p class="text-muted font-weight-400">We coach and guide practitioners to support them in their work, and also in their personal lives.</p>
@@ -120,7 +120,7 @@
         <div class="container-xxl mt--10 py-7">
             <div class="row py-5">
                 <div class="col-lg-6 col-md-12 col-12 mb-5 text-center align-self-lg-center">
-                    <img class="w-100" src="{{ config('r2.endpoint') }}/images/brands/Promiseland-Logo-alt-white.png">
+                    <img class="w-100" :src="$page.props.r2Endpoint + '/images/brands/Promiseland-Logo-alt-white.png'">
                 </div>
                 <div class="col-lg-6 col-md-12 mt-2">
                     <h2 class="finark-landing-h2 text-uppercase text-white mb-5 text-start">Our FA Firm</h2>
@@ -139,7 +139,7 @@
             <div class="pt-lg-7 pt-6 pb-lg-7 pb-7">
                 <div class="row">
                     <div class="col-lg-5 col-md-12 col-12 text-center mb-lg-0 mb-4 pr-5 align-self-center">
-                        <img class="w-100" src="{{ config('r2.endpoint') }}/images/misc/our-business-partner-2024.png">
+                        <img class="w-100" :src="$page.props.r2Endpoint + '/images/misc/our-business-partner-2024.png'">
                     </div>
                     <div class="col-lg-7 col-md-12 ps-5">
                         <h2 class="fa-2024-landing-h2 text-uppercase finark-text-primary text-start">Our business partners</h2>
@@ -168,7 +168,7 @@
                         <div class="finark-bp-container fa-2024-landing-partners col" v-for="group in groups" :key="group.id" :class="!group.lg ? ((group.id == 7 || group.id == 8) ? (group.id === 8 ? 'd-none' : 'd-lg-none d-block') : 'd-lg-block d-none') : ''">
                             <h2 class="mb-3">{{ group.count }}</h2>
                             <div class="bp-icon">
-                                <img :src="'storage/images/icons/partners/2024/' + group.icon" />
+                                <img :src="$page.props.r2Endpoint + '/images/icons/partners/2024/' + group.icon" />
                             </div>
                             <p class="mt-4">{{ group.name }}</p>
                         </div>
@@ -183,7 +183,7 @@
                         <div class="finark-bp-container fa-2024-landing-partners col" v-for="group in groups" :key="group.id" v-show="group.col == 2">
                             <h2 class="mb-3">{{ group.count }}</h2>
                             <div class="bp-icon">
-                                <img :src="'storage/images/icons/partners/2024/' + group.icon" />
+                                <img :src="$page.props.r2Endpoint + '/images/icons/partners/2024/' + group.icon" />
                             </div>
                             <p class="mt-4">{{ group.name }}</p>
                         </div>

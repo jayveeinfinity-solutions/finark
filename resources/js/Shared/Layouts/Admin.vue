@@ -54,7 +54,7 @@
                 <div class="admin--sidebar--content d-flex flex-column">
                     <div class="admin--sidebar--content--header">
                         <a href="/admin/home/">
-                            <img src="{{ config('r2.endpoint') }}/images/brands/logo-banner-white.png" />
+                            <img :src="$page.props.r2Endpoint + '/images/brands/logo-banner-white.png'" />
                         </a>
                         <div class="icon-wrapper text-center align-self-center" @click.prevent="ToggleSidebar" >
                             <FontAwesomeIcon icon="fa-solid fa-bars-staggered" class="icon" v-if="Sidebar" />

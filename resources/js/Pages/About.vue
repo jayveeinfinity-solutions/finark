@@ -6,13 +6,13 @@
         <!-- Social media meta tags -->
         <meta head-key="social-title" property="og:title" content="About Us &sdot; FinArk - Financial Ark">
         <meta head-key="social-description" property="og:description" content="FinArk provides quality financial adviced and best-in-class financial solutions to our clients - serving our clients' best interest.">
-        <meta head-key="social-image" property="og:image" itemprop="image" content="http://fin-ark.com/storage/images/misc/aboutus.jpeg">
+        <meta head-key="social-image" property="og:image" itemprop="image" :content="$page.props.r2Endpoint + '/images/misc/aboutus.jpeg'">
         <meta head-key="social-url" property="og:url" content="http://fin-ark.com/about">
         <meta head-key="social-type" property="og:type" content="website">
         <!-- Twitter meta tags -->
         <meta head-key="twitter-title" property="twitter:title" content="About Us &sdot; FinArk - Financial Ark">
         <meta head-key="twitter-description" property="twitter:description" content="FinArk provides quality financial adviced and best-in-class financial solutions to our clients - serving our clients' best interest.">
-        <meta head-key="twitter-image" property="twitter:image" content="http://fin-ark.com/storage/images/misc/aboutus.jpeg">
+        <meta head-key="twitter-image" property="twitter:image" :content="$page.props.r2Endpoint + '/images/misc/aboutus.jpeg'">
     </Head>
     <!-- # WELCOME SECTION -->
     <div class="pt-8 pb-0 bg-white">
@@ -109,7 +109,7 @@
                     <div class="col-lg-4 col-md-12 col-sm-12 mb-7" v-for="leader in leaders" :key="leader.key">
                         <div class="d-flex flex-column justify-content-center" style="gap: 1rem;">
                             <div class="align-self-center" style="width: 10rem;">
-                                <img class="rounded object-fit-cover" :src="'storage/images/leaders/' + leader.avatar" style="width: 10rem;">
+                                <img class="rounded object-fit-cover" :src="$page.props.r2Endpoint + '/images/leaders/' + leader.avatar" style="width: 10rem;">
                             </div>
                             <div class="d-flex flex-column align-items-center" style="gap: 0.25rem;">
                                 <p class="fa-2024-aboutus-leader-card-group" v-html="leader.group  ?? '&nbsp;'"></p>
@@ -134,7 +134,7 @@
                                     <div class="row mt-4">
                                         <div class="col-lg-6 col-12 d-flex flex-column fa-2024-aboutus-leader-modal">
                                             <div class="align-self-center">
-                                                <img class="w-100" :src="'/storage/images/leaders/' + leaders[activeLeader].avatar">
+                                                <img class="w-100" :src="$page.props.r2Endpoint + '/images/leaders/' + leaders[activeLeader].avatar">
                                             </div>
                                             <h3 :class="(leaders[activeLeader].group ? 'mt-5' : 'mt-3')" v-html="leaders[activeLeader].group"></h3>
                                             <h1 class="m-0">{{ leaders[activeLeader].name }}</h1>
