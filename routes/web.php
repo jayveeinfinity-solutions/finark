@@ -149,5 +149,15 @@ Route::middleware('auth')->group(function() {
     });
 });
 
+Route::prefix('intranet')->name('intranet.')->group(function () {
+    Route::get('/auth', [\App\Http\Controllers\Intranet\AuthController::class, 'index'])->name('auth');
+    Route::post('/auth', [\App\Http\Controllers\Intranet\AuthController::class, 'login'])->name('login');
+    Route::post('/logout', [\App\Http\Controllers\Intranet\AuthController::class, 'logout'])->name('logout');
+
+    Route::middleware('auth')->group(function () {
+        Route::get('/dashboard', [\App\Http\Controllers\Intranet\DashboardController::class, 'index'])->name('dashboard');
+    });
+});
+
 require __DIR__.'/auth.php';
 require __DIR__.'/forum.php';

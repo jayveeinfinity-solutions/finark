@@ -7,6 +7,7 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
     resolve: {
         alias: {
+            '@': '/resources/js',
             '@shared': '/resources/js/Shared',
             '@pages': '/resources/js/Pages',
         },

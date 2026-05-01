@@ -12,6 +12,7 @@ import 'sweetalert2/dist/sweetalert2.min.css';
 
 import LandingLayout from '@shared/Layouts/Landing.vue';
 import CorporateUILayout from '@shared/Layouts/CorporateUI.vue';
+import IntranetLayout from '@shared/Layouts/Intranet.vue';
 
 // Region Fontawesome
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -39,6 +40,11 @@ createInertiaApp({
         // Assign a layout dynamically
         if (name.startsWith("Admin/")) {
             page.default.layout ??= CorporateUILayout;
+        } else if (name.startsWith("Intranet/")) {
+            // Login page shouldn't have the layout
+            if (name !== 'Intranet/Auth') {
+                page.default.layout ??= IntranetLayout;
+            }
         } else {
             page.default.layout ??= LandingLayout;
         }
