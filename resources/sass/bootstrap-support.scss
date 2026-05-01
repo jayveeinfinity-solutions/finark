@@ -1,0 +1,9 @@
+// Bootstrap 5 compatibility layer
+// This file can be imported by specific components or pages that still require Bootstrap classes.
+
+@import 'variables';
+@import 'admin';
+@import 'custom';
+
+// Import Bootstrap from node_modules
+@import 'bootstrap/scss/bootstrap';
